@@ -1,0 +1,316 @@
+.header {
+  font-size: .675rem;
+  position: fixed;
+  z-index: 10000;
+}
+.aui-content {
+  margin-top: 45px;
+}
+.aui-searchbar {
+  background: transparent;
+  width: 58%;
+}
+.aui-searchbar-input input {
+  width: 100%;
+  padding-right: 15px;
+}
+.aui-service, .aui-message {
+  padding-top: 7px;
+  line-height: 0;
+  font-size: 12px;
+}
+.aui-service {
+  padding: 7px 10px 0 0;
+}
+.aui-service .icon_service {
+  display: inline-block;
+  padding-top: 25px;
+  background: url(../images/icon/icon_service.png) no-repeat center -1px;
+  background-size: 16px;
+}
+.aui-message .icon_message {
+  display: inline-block;
+  padding-top: 25px;
+  background: url(../images/icon/icon_message.png) no-repeat center 0;
+  background-size: 16px;
+  position: relative;
+}
+.aui-message .icon_message i {
+  position: absolute;
+  background: #ff0000;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  line-height: 15px;
+  top: -4px;
+  right: -5px;
+  font-style: normal;
+  font-size: 8px;
+}
+.aui-grid [class*=aui-col-]:first-child,.aui-grid [class*=aui-col-]:nth-child(2),.aui-grid [class*=aui-col-]:nth-child(3),.aui-grid [class*=aui-col-]:nth-child(4) {
+  padding-bottom: 0;
+}
+.aui-group-title {
+  text-align: center;
+  padding: 10px 0 5px;
+  background: url(../image/line.png) no-repeat center 20px;
+}
+.aui-grid .aui-grid-label {
+  font-size: 0.675rem;
+  margin-top: 0.2rem;
+}
+.aui-grid .aui-grid-txt {
+  font-size: .675rem;
+  color: #f65455;
+}
+.aui-grid .aui-flex-img .aui-flex-3 .aui-total {
+  font-size: 12px;
+  text-align: left;
+  padding: 3px 5px .25rem;
+  color: #757575;
+  overflow: hidden;
+}
+.aui-total em {
+  color: #0082d2;
+}
+.aui-grid .aui-grid-txt em {
+  font-size: .875rem;
+}
+.aui-btn-sm {
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0 .2rem;
+  font-size: 12px;
+  float: right;
+}
+.aui-tit {
+  padding: 10px 0 15px 10px;
+}
+.aui-tit img {
+  width: 66px;
+  height: 16px;
+  float: left;
+}
+.swiper_box {
+  height: 1.0rem;
+  overflow: hidden;
+}
+.ice_dark {
+  padding: 0 10px;
+  margin: 10px 5px;
+  border-left:1px solid #ddd;
+  height: 1.0rem;
+}
+.aui-grid-img {
+  text-align: center;
+  height: 2.35rem;
+}
+.aui-grid-img img {
+  display: inline;
+  width: 2.35rem;
+  height: 2.35rem;
+}
+.aui-grid [class*=aui-col-] {
+  padding: .5rem 0;
+}
+.ice_tab {
+  padding: 0.75rem;
+  overflow: hidden;
+}
+.aui-grid .ice_tab li,.aui-grid .ice_list .aui-col-xs-4 {
+  padding: 0;
+  font-size: .75rem;
+}
+.aui-grid .ice_tab em {
+  padding-bottom: 3px;
+  border-bottom: 1px solid #fff;
+}
+.aui-grid .ice_tab .active em {
+  border-bottom-color: #f68020;
+  color: #f68020;
+}
+.ice_hot {
+  font-size: 8px;
+  color: #ff0000;
+  line-height: 1.2;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+}
+.ice_dot {
+  font-size: 8px;
+  color: #fff;
+  background-color: #ff0000;
+  padding: 2px 4px;
+  border-radius: 8px;
+  line-height: 1.2;
+  position: absolute;
+  right: 3px;
+  top: 0;
+}
+.ice_tab_content {
+  padding: 0 10px;
+  margin-left: -0.5rem;
+}
+.ice_list_dl {
+  margin-left: 0.5rem;
+  margin-top: 5px;
+}
+.ice_list_dl dd {
+  font-size: .675rem;
+  text-align: left;
+  padding-top: 5px;
+}
+.ice_list_dl dd:last-child {
+    padding-bottom: 5px;
+    line-height: 0.875rem;
+    font-size: 0.65rem;
+    padding-top: 0;
+}
+.aui-grid .aui-col-xs-6 {
+  padding-top: 0;
+}
+.ice_tag::before,.ice_tag::after {
+  font-size: 0;
+  line-height: 0;
+  border-width: 4px;
+  border-left-width: 0;
+  border-style: dashed;
+  border-right-style: solid;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  content: ' ';
+  position: absolute;
+  left: -5px;
+  top: 2.5px;
+}
+.ice_tag::before {
+  z-index: 2;
+  left: -4px;
+}
+.ice_tag_blue::before {
+  border-left-color: #69c2f8;
+  border-right-color: #69c2f8;
+}
+.ice_tag_blue::after {
+  border-left-color: #0082d2;
+  border-right-color: #0082d2;
+}
+.ice_tag_yellow::before {
+  border-left-color: #faad4c;
+  border-right-color: #faad4c;
+}
+.ice_tag_yellow::after {
+  border-left-color: #f48400;
+  border-right-color: #f48400;
+}
+.aui-slide-page-wrap.ice_activity {
+  bottom: 8px;
+}
+.ice_activity .aui-slide-page-active {
+  background-color: #f68020;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 2px;
+}
+.ice_title {
+  text-align: center;
+}
+.top_rank {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 32px;
+  background: url(../images/top_rank_bg.png) no-repeat;
+  background-size: 32px;
+  text-align: center;
+  color: #fff;
+  font-size: .725rem;
+  padding-top: 18px;
+  padding-bottom: 10px;
+}
+ .ice_view {
+   background-color: #dbeef3;
+   border:1px solid #0082d2;
+   font-size: .625rem;
+   color: #0082d2;
+   padding: 5px 10px 3px;
+   border-radius: 0;
+   line-height: 0.85rem;
+   height: auto;
+   top: 18px;
+ }
+ .space_line {
+   margin-left: 0.3rem;
+   margin-right: 0.3rem;
+   border-left: 1px solid #e5e5e5;
+ }
+.aui-flex-img {
+	padding: 0 15px 15px;
+	display:-webkit-flex;
+	display:flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+}
+.aui-flex-img .aui-flex-2 {
+	width:48.5%;
+}
+.aui-grid .aui-flex-img .aui-flex-3 {
+	width:31.5%;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+}
+.aui-grid .aui-flex-3 .aui-grid-label, .aui-flex-3 p {
+  font-size: .625rem;
+}
+.aui-grid .aui-flex-3 .aui-grid-label {
+  margin-top: .35rem;
+}
+.aui-grid .aui-flex-3 a .aui-grid-label {
+  color: #000;
+}
+.aui-flex-3 p {
+  padding-bottom: .25rem;
+}
+.aui-item-img {
+  padding: 0 15px 15px;
+}
+.ice_btn_primary {
+    padding: 1px 30px;
+    font-size: 0.625rem;
+    line-height: normal;
+    height: auto;
+}
+.offspring .ice_list_dl dt {
+    max-height: 5.75rem;
+    overflow: hidden;
+}
+.offspring .ice_list_dl dt img {
+    margin-top: -0.95rem;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 3px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+.ice_list .swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 6px;
+}
+.ice_list .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 13px;
+  font-size: 8px;
+  color:#000;
+}
+.ice_list .swiper-pagination-bullet-active {
+  background-color: #f48400;
+  color: #fff;
+}
+.Igotit {width: 4.25rem; margin: 0.2rem auto 0.75rem; font-size: 0.65rem; color: #4da6fa; border:1px solid #4da6fa; border-radius: 5px; line-height: 1.2rem;}

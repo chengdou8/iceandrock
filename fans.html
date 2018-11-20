@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的关注</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iceandrock.css" />
+</head>
+<body>
+<div class="aui-content" style="padding-bottom:0;">
+    <div class="ice_tab flex">
+    	<span class="ice_tab_item active">关注的用户</span>
+    	<span class="ice_tab_item">关注的领队</span>
+    	<span class="ice_tab_item">我的粉丝</span>
+    </div>
+    
+    <div class="tab_content">
+    	<div class="ice_list">
+    		<div class="ice_fans_item flex_between">
+    			<div class="ice_user_info">
+    				<div class="ice_user_img"><img src="./images/head_img01.png" class="w225e h225e" /></div>
+    				<div class="ice_user_inner">
+    					<div class="ovd fs6"><span class="fl">小朱</span><img src="./images/man.png" class="w06e h06e" /></div>
+    					<div class="padt01 fs6">三年级</div>
+    				</div>
+    			</div>
+    			
+    			<div class="ice_user_right"><span class="ice_concern">+ 关注</span></div>
+    		</div>
+    		
+    		<div class="ice_fans_item flex_between">
+    			<div class="ice_user_info">
+    				<div class="ice_user_img"><img src="./images/head_img02.png" class="w225e h225e" /></div>
+    				<div class="ice_user_inner">
+    					<div class="ovd fs6"><span class="fl">小草莓</span><img src="./images/weman.png" class="w06e h06e" /></div>
+    					<div class="padt01 fs6">幼儿园</div>
+    				</div>
+    			</div>
+    			
+    			<div class="ice_user_right"><span class="ice_concern ice_concerned">√ 已关注</span></div>
+    		</div>
+		</div>
+    	<div class="ice_list hide">
+    		<div class="pad075 padt05 padb05 flex_between">
+    			<div class="padt02 fs6 c_666">当领队有新活动时通知我</div>
+    			<div>
+    				<input class="aui-switch" type="checkbox" name="demo2" checked="">
+    			</div>
+    		</div>
+			<div class="ice_fans_item flex_between">
+    			<div class="ice_user_info">
+    				<div class="ice_user_img"><img src="./images/head_img01.png" class="w225e h225e" /></div>
+    				<div class="ice_user_inner">
+    					<div class="ovd fs6"><span class="fl">领队A</span><img src="./images/man.png" class="w06e h06e" /></div>
+    					<div class="padt01 fs6">三年级</div>
+    				</div>
+    			</div>
+    			
+    			<div class="ice_user_right"><span class="ice_concern ice_concerned">√ 已关注</span></div>
+    		</div>
+    		
+    		<div class="ice_fans_item flex_between">
+    			<div class="ice_user_info">
+    				<div class="ice_user_img"><img src="./images/head_img02.png" class="w225e h225e" /></div>
+    				<div class="ice_user_inner">
+    					<div class="ovd fs6"><span class="fl">领队B</span><img src="./images/weman.png" class="w06e h06e" /></div>
+    					<div class="padt01 fs6">幼儿园</div>
+    				</div>
+    			</div>
+    			
+    			<div class="ice_user_right"><span class="ice_concern ice_concerned">√ 已关注</span></div>
+    		</div>
+		</div>
+    	<div class="ice_list hide">
+    		<div class="ice_fans_item flex_between">
+    			<div class="ice_user_info">
+    				<div class="ice_user_img"><img src="./images/head_img01.png" class="w225e h225e" /></div>
+    				<div class="ice_user_inner">
+    					<div class="ovd fs6"><span class="fl">粉丝A</span><img src="./images/man.png" class="w06e h06e" /></div>
+    					<div class="padt01 fs6">三年级</div>
+    				</div>
+    			</div>
+    			
+    			<div class="ice_user_right"><span class="ice_concern ice_concerned">√ 已关注</span></div>
+    		</div>
+    		
+    		<div class="ice_fans_item flex_between">
+    			<div class="ice_user_info">
+    				<div class="ice_user_img"><img src="./images/head_img02.png" class="w225e h225e" /></div>
+    				<div class="ice_user_inner">
+    					<div class="ovd fs6"><span class="fl">粉丝B</span><img src="./images/weman.png" class="w06e h06e" /></div>
+    					<div class="padt01 fs6">幼儿园</div>
+    				</div>
+    			</div>
+    			
+    			<div class="ice_user_right"><span class="ice_concern ice_concerned">√ 已关注</span></div>
+    		</div>
+		</div>
+    </div>
+</div>
+<script type="text/javascript" src="./script/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+  $('.ice_tab .ice_tab_item').on('click',function(index) {
+  	var index=$(this).index();
+  	$(this).addClass('active').siblings().removeClass('active');
+  	$('.tab_content .ice_list').eq(index).removeClass('hide').siblings().addClass('hide');
+  })
+</script>
+</body>
+</html>

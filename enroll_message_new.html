@@ -1,0 +1,1169 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>冰岩探险旅行户外俱乐部</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iceandrock.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iosSelect.css" />
+    <link rel="stylesheet" type="text/css" href="./css/mui.picker.min.css" />
+    <style>
+    .padr05 {padding-right: 0.5rem;}
+    .right_arrow::before {right:0.75rem; width: 0.45rem;height: 0.45rem;}
+    .right_down_real_arrow {padding-right: 0.55rem;}
+    .right_down_real_arrow::before {right: -2px; top: 0.25em;}
+    .ice_btn_primary {padding:0.45em 30px;}
+    .personItem {position: relative; padding-top: 0.75rem;}
+    #showAddress {height: 2.0rem; width: 100%; line-height: 2rem;font-size: 0.625rem; color: #424242;}
+    .mui-backdrop {position: fixed;z-index: 998;top: 0;right: 0;bottom: 0;left: 0;background-color: rgba(0,0,0,.3);}
+    .inputDiv {padding-left: 2.85rem;}
+    .inputDiv input {width: 93.5%; height: 1.8rem; line-height: 1.8rem; border:1px solid #e5e5e5;}
+    
+    .iceSwitch {text-align:right; padding-right:0.5rem;}
+    .aui-switch {height:1.0rem;}
+    .aui-switch:before {width:0.9rem; height:0.9rem; border-radius: 0.45rem;}
+    .aui-switch:checked:before {left:1.3rem;}
+    .ice_select {background-color: #fff;padding: 2px 5px;border-radius: 4px;font-size: 0.6rem;line-height: 0.875rem;margin: 0 3px;}
+  	.marl02 {margin-left:0.2em;}
+  	.content-padded {padding: 0 1.5rem; text-align: left;}
+  	.content-padded label {width: 20%;display: inline-block; padding: 0.3em;}
+  </style>
+</head>
+<body>
+  <header class="aui-bar aui-bar-nav header">
+    <a class="aui-btn aui-pull-left">
+      <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">填写报名信息</div>
+    <span class="icon_home"></span>
+  </header>
+  <div class="aui-content">
+    <form class="cmsform" id="commentForm" method="get" action="">
+      <div class="pad075">
+        <div class="c_0082d2 fs725">选择集合地点</div>
+        <div class="select_box mart03 right_arrow">
+            <input type="hidden" class="selectInput" name="address_id" id="addressId">
+            <div id="showAddress" onclick="selectDom(this,address_data)">请在下列集合地点选择</div>
+        </div>
+      </div>
+
+      <div class="pad075 mart-05">
+        <div class="c_0082d2 fs725 padb5"><span class="fr ice_btn_blue" id="open_common_people">常用人</span>请填写真实信息</div>
+        <p>冰岩探险将为您投保慧择保险“****”旅行保障计划</p>
+        <div class="persons" id="persons">
+          <div class="personItem">
+            <div class="person_info marr380">
+                <ul class="aui-list aui-form-list">
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-label fs7">真实姓名：</div>
+                            <div class="aui-list-item-input">
+                                <input type="text" name="real_name" class="real_name txr fs7" id="relname_0" placeholder="与证件名字一致">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-label right_down_real_arrow pstr fs7">
+                              <input type="hidden" class="selectInput" name="paper_id" id="paperId_0" value="30001">
+                              <div id="showPaper_0" class="paper w10 txl fs7" data-id="30001" data-value="身份证" onclick="selectDom(this,paper_data)">身份证</div>
+                              <span class="colon fs7" style="position: absolute; right: -2px;">：</span>
+                            </div>
+                            <div class="aui-list-item-input">
+                                <input type="number" name="cardId" id="paper_code_0" class="pincode txr fs7" placeholder="必填">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item isHide" style="display:none">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-label fs7">出生日期：</div>
+                            <div class="aui-list-item-input">
+                                <input type="text" class="txr fs7 birth" data-options='{"type":"date","beginYear":1949,"endYear":2010}' id="birthshow" onclick="dtpicker(this)" value="" placeholder="必填" readonly>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item isHide" style="display:none">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-label fs7">性　　别：</div>
+                            <div class="aui-list-item-input txr">
+                              <label class="marr05 fs7"><input class="aui-radio" type="radio" name="sex" checked=""> 男</label>
+                              <label class="fs7"><input class="aui-radio" type="radio" name="sex"> 女</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-label fs7">电话号码：</div>
+                            <div class="aui-list-item-input">
+                                <input type="number" class="phone txr fs7" name="phone" id="phone_0" placeholder="必填">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-label fs7">交通方式：</div>
+                            <div class="aui-list-item-input">
+                                <div class="right_down_real_arrow txr fs7">
+                                  <input type="hidden" class="selectInput" name="traffic_id0" id="trafficId_0" value="">
+                                  <div id="showTraffic_0" class="traffic txr fs7" onclick="selectDom(this,traffic_data)">请您选择</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-label fs7" style="width:100%;">关口或目的地集合：</div>
+                            <div class="aui-list-item-input txr">
+                                <label><span class="txc fs7 marr10e"><em class="c_0082d2">-30</em>元</span><input class="aui-checkbox " type="checkbox" value="-30" name="destination" onchange="getCheckbox(this)"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="aui-list-item">
+                        <div class="aui-list-item-inner">
+                            <div class="aui-list-item-label fs7" style="width:100%;">机票代订(多退少补)：</div>
+                            <div class="aui-list-item-input txr">
+                                <label><span class="txc fs7 marr10e"><em class="c_0082d2">+1500</em>元</span><input class="aui-checkbox" type="checkbox" value="+1500" name="ticket" onchange="getCheckbox(this)"></label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <span class="add_btn" onclick="additems()"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pad075 mart-05">
+        <div class="c_0082d2 fs725">费用详情</div>
+        <div class="person_info mart10">
+          <ul class="aui-list aui-form-list">
+              <li class="aui-list-item">
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-label fs7">基础价格：</div>
+                      <div class="aui-list-item-middle fs7"><span class="c_0082d2"><em id="basicPrice">988</em></span>元/人</div>
+                      <div class="aui-list-item-right padr075 txr fs7"><span class="c_0082d2" id="personNum">1</span>人</div>
+                  </div>
+              </li>
+              <li class="aui-list-item">
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-label fs7"><span id="few">0</span>名以上优惠：</div>
+                      <div class="aui-list-item-middle fs7"><span class="c_0082d2"><em id="discount">-5</em></span>元/人</div>
+                      <div class="aui-list-item-right padr075 txr fs7"><span class="c_0082d2" id="personNumber">1</span>人</div>
+                  </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pad075 mart-05">
+        <div class="c_0082d2 fs725">增值服务</div>
+        <div class="person_info mart10">
+          <ul class="aui-list aui-form-list">
+              <li class="aui-list-item">
+                  <div class="aui-list-item-inner ice_service">
+                      <div class="aui-list-item-label fs7">租用双人帐篷：</div>
+                      <div class="aui-list-item-middle fs7"><span class="unitPrice c_0082d2">+1600</span>元/份</div>
+                      <div class="aui-list-item-right">
+                          <div class="fr padr05 padt01">
+                            <div class="spinner">
+                              <button type="button" class="decrease">-</button>
+                              <input type="text" class="value" disabled="disabled">
+                              <button type="button" class="increase">+</button>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+              <li class="aui-list-item">
+                  <div class="aui-list-item-inner ice_service">
+                      <div class="aui-list-item-label fs7">租用睡袋：</div>
+                      <div class="aui-list-item-middle fs7"><span class="unitPrice c_0082d2">+50</span>元/份</div>
+                      <div class="aui-list-item-right">
+                          <div class="fr padr05 padt01">
+                            <div class="spinner">
+                              <button type="button" class="decrease">-</button>
+                              <input type="text" class="value" disabled="disabled">
+                              <button type="button" class="increase">+</button>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pad075 mart-05">
+        <div class="c_0082d2 fs725">商品服务</div>
+        <div class="person_info pad075 mart10">
+          <div class="fs625">冰岩原创设计<span class="c_666">（点击图片查看大图）</span></div>
+          <div class="ovd marl-10 padt10">
+            <div class="aui-col-xs-3 incremen">
+              <div class="marl10">
+                <img src="./images/201805241904.jpg" class="pimg" />
+                <p class="aui-ellipsis-1 fs625 padt5">冰岩商品名称</p>
+                <div class="price c_f00 fs7">¥<span class="unitPrice">5</span></div>
+                <div class="spinner">
+                  <button type="button" class="decrease">-</button>
+                  <input type="text" class="value" disabled="disabled">
+                  <button type="button" class="increase">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="aui-col-xs-3 incremen">
+              <div class="marl10">
+                <img src="./images/201805241904.jpg" class="pimg" />
+                <p class="aui-ellipsis-1 fs625 padt5">冰岩商品名称</p>
+                <div class="price c_f00 fs7">¥<span class="unitPrice">12</span></div>
+                <div class="spinner">
+                  <button type="button" class="decrease">-</button>
+                  <input type="text" class="value" disabled="disabled">
+                  <button type="button" class="increase">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="aui-col-xs-3 incremen">
+              <div class="marl10">
+                <img src="./images/201805241904.jpg" class="pimg" />
+                <p class="aui-ellipsis-1  fs625 padt5">冰岩商品名称</p>
+                <div class="price c_f00 fs7">¥<span class="unitPrice">8</span></div>
+                <div class="spinner">
+                  <button type="button" class="decrease">-</button>
+                  <input type="text" class="value" disabled="disabled">
+                  <button type="button" class="increase">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="aui-col-xs-3 incremen">
+              <div class="marl10">
+                <img src="./images/201805241904.jpg" class="pimg" />
+                <p class="aui-ellipsis-1 fs625 padt5">冰岩商品名称</p>
+                <div class="price c_f00 fs7">¥<span class="unitPrice">15</span></div>
+                <div class="spinner">
+                  <button type="button" class="decrease">-</button>
+                  <input type="text" class="value" disabled="disabled">
+                  <button type="button" class="increase">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pad075 mart-05">
+        <div class="c_0082d2 fs725">支付方式</div>
+        <div class="person_info mart10">
+          <ul class="aui-list aui-form-list">
+              <li class="aui-list-item">
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-label fs7">微信支付：</div>
+                      <div class="aui-list-item-right" style="width:auto">
+                          <label class="marr05 fs7"><input class="aui-radio" type="radio" name="payment" value="wxpay" checked=""></label>
+                      </div>
+                  </div>
+              </li>
+              <li class="aui-list-item">
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-label fs7">支付宝支付：</div>
+                      <div class="aui-list-item-right" style="width:auto">
+                          <label class="marr05 fs7"><input class="aui-radio" type="radio" value="alipay" name="payment"></label>
+                      </div>
+                  </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pad075 mart-05">
+        <div class="c_0082d2 fs725">优惠折扣</div>
+        <div class="person_info mart10">
+          <ul class="aui-list aui-form-list">
+          	  <li class="aui-list-item">
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-label fs7">优惠券</div>
+                      <div class="aui-list-item-right" style="width:auto">
+                          <label class="marr05"><input type="hidden" class="selectInput" name="coupon_id" id="couponId"><span class="txc fs7 c_0082d2 marr03" id="showCoupon" onClick="selectDom(this,coupon_data)">（支付后不退还）</span><input class="aui-checkbox" type="checkbox" name="coupon"></label>
+                      </div>
+                  </div>
+              </li>
+              <li class="aui-list-item">
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-label fs7" style="width:auto">冰币<span class="padl075 fs6 c_666" id="myicecoin"></span></div>
+                      <div class="aui-list-item-right iceSwitch">
+                          <input class="aui-switch" type="checkbox" id="icecoin_id" name="iceCoin" value="0" onclick="checkbox(this)">
+                      </div>
+                  </div>
+              </li>
+          </ul>
+        </div>
+        
+        <ul class="aui-list aui-form-list" id="use_coin" style="display:none">
+        	<li class="aui-list-item" style="background: transparent; padding-left: 0;">
+              <div class="aui-list-item-inner">
+                  <div class="aui-list-item-label fs7" style="width:auto">
+                  	<input type="hidden" name="icecoinprice" value="200">
+                  	<span class="fs6 c_666">使用<span class="ice_select"><span id="iceTotal">200</span><em class="marl02 aui-iconfont aui-icon-down fs625"></em></span>冰币，抵<span class="ice_tip c_f68020">¥20.00</span></span></div>
+              </div>
+           </li>
+        </ul>
+      </div>
+    </form>
+    <div class="padl075 padr075 padb075 padt5 mart-05">
+      <label><input class="aui-checkbox" type="checkbox" name="name2"><span class="fs625 c_666 marl03">我已阅读并同意<em class="c_0082d2">《冰岩旅游协议》</em></span></label>
+    </div>
+  </div>
+
+  <footer class="ice_bar ubt" id="footer">
+      <div class="ice_bar_item padl075 fs75 txl">
+          总费用：<span class="c_0082d2" id="allTotal">0</span> 元
+          <a class="c_999 fs625" id="details">[明细]</a>
+      </div>
+      <div class="ice_bar_item blue_btn" id="submit" tapmode>去支付</div>
+  </footer>
+
+  <div class="ice_dialog" id="detailed" style="margin-top:-180px;">
+    <div class="ice_dialog_header">【费用明细】</div>
+    <div class="ice_dialog_content line15 marl10e marr10e padb075 fs7">
+        <div class="flex_between">
+          <div class="">基础价</div>
+          <div class="c_0082d2">180元 * 1人</div>
+        </div>
+        <div class="flex_between">
+          <div class="">交通方式</div>
+          <div class="c_0082d2">-50元 * 1人</div>
+        </div>
+        <div class="flex_between">
+          <div class="">关口或目的地集合</div>
+          <div class="c_0082d2">-60元 * 1人</div>
+        </div>
+        <div class="flex_between">
+          <div class="">前4名优惠</div>
+          <div class="c_0082d2">-30元 * 1人</div>
+        </div>
+        <div class="flex_between">
+          <div class="">租用双人帐篷</div>
+          <div class="c_0082d2">+150元 * 1份</div>
+        </div>
+        <div class="flex_between">
+          <div class="">租用睡袋</div>
+          <div class="c_0082d2">+30元 * 1份</div>
+        </div>
+        <div class="flex_between">
+          <div class="">商品名称</div>
+          <div class="c_0082d2">+15元 * 1件</div>
+        </div>
+        <div class="flex_between">
+          <div class="">冰币抵扣</div>
+          <div class="c_0082d2">-25元</div>
+        </div>
+        <div class="flex_between">
+          <div class="">优惠券</div>
+          <div class="c_0082d2">-10元</div>
+        </div>
+        <span class="colse_poup"><img src="./images/icon/close.png" class="w225e" /></span>
+    </div>
+    <div class="txc pad075 w10 ubt fs7">订单总价：<span class="c_f68020">¥1200</span>元</div>
+  </div>
+
+  <div class="ice_dialog" id="iceCoin" style="margin-top:-90px;">
+    <div class="ice_dialog_header">冰币抵扣</div>
+    <div class="ice_dialog_content c_777 padb075" style="line-height:1.8rem;">
+        <div class="ovd padl075 padr075 fs65">
+          <span class="fl w25e txr">冰币：</span>
+          <div class="inputDiv"><input type="number" class="txc fs65" id="iceCoin_Price" placeholder="您的可用冰币:0" /></div>
+        </div>
+        <div class="txc fs6">可抵扣<span class="c_0082d2" id="iceCoin_allPrice">0</span>元，冰币抵扣后不会导致用户等级下降</div>
+        <div class="txc fs6 c_f00" id="error" style="display:none; height:15px; line-height: 15px;margin-top:-5px;"></div>
+    </div>
+    <div class="ice_dialog_footer ubt">
+        <div class="ice_dialog_btn ice_btn_cancle ubr">取消</div>
+        <div class="ice_dialog_btn ice_btn_confirm c_0082d2">使用</div>
+    </div>
+  </div>
+  
+  <div class="ice_dialog" id="iceCoinSelect" style="margin-top:-90px;">
+    <div class="ice_dialog_header">使用冰币抵扣</div>
+    <div class="ice_dialog_content content-padded c_777 padb075">
+        <label><input class="aui-radio" type="radio" name="iceslect" value="10" checked="checked"> 10</label>
+        <label><input class="aui-radio" type="radio" name="iceslect" value="20"> 20</label>
+        <label><input class="aui-radio" type="radio" name="iceslect" value="30"> 30</label>
+        <label><input class="aui-radio" type="radio" name="iceslect" value="40"> 40</label>
+        <label><input class="aui-radio" type="radio" name="iceslect" value="50"> 50</label>
+        <label><input class="aui-radio" type="radio" name="iceslect" value="60"> 60</label>
+        <label><input class="aui-radio" type="radio" name="iceslect" value="70"> 70</label>
+        <label><input class="aui-radio" type="radio" name="iceslect" value="80"> 80</label>
+        <label><input class="aui-radio" type="radio" name="iceslect" value="90"> 90</label>
+    </div>
+    <div class="ice_dialog_footer ubt">
+        <div class="ice_dialog_btn ice_btn_cancle ubr">取消</div>
+        <div class="ice_dialog_btn ice_btn_confirm c_0082d2">使用</div>
+    </div>
+  </div>
+
+  <div class="common_people" id="common_people">
+    <div class="aui-grid flex_between pad075 ubb">
+      <div class="fs7 c_999">勾选添加常用人信息</div>
+      <div class="action">
+        <input type="button" value="编辑" class="edit_people ice_btn_blue padl10 padr10" name="edit_person" />
+        <input type="button" value="取消" class="cancel_edit ice_btn_gray padl10 padr10 marl03 hide" name="cancel_edit" />
+        <input type="button" value="确定" class="confirm ice_btn_yellow padl10 padr10 marl03" name="confirm" />
+      </div>
+    </div>
+    <div class="aui-grid ubb pad075 marb05 fs7 lin165 pstr user_info selected">
+        <div class="ovd"><div class="w35 fl">姓名：<span class="common_name" data-value="五福">五福</span></div><span class="fl marl10 w35"><em class="set_default get_default">默认</em></span><span class="fl w30 edit hide txc c_0082d2">编辑</span></div>
+        <div class="common_code" data-type='30002' data-value="612726198209136317">身份证号：612726198209136317</div>
+        <div class="common_phone" data-value="13212583128">电话号码：13212583128</div>
+        <span class="handle">
+          <span class="select"></span>
+          <span class="delete hide" tapmode onclick="openDialog('text')"></span>
+        </span>
+    </div>
+    <div class="aui-grid ubb pad075 marb05 fs7 lin165 pstr user_info">
+        <div class="ovd"><div class="w35 fl">姓名：<span class="common_name" data-value="李建刚">李建刚</span></div><span class="fl marl10 w35"><em class="set_default">设为默认</em></span><span class="fl w30 edit hide txc c_0082d2">编辑</span></div>
+        <div class="common_code" data-type='30003' data-value="610525199505215001">身份证号：610525199505215001</em></div>
+        <div class="common_birth" data-value="1995-05-21">出生日期：1995-05-21</div>
+        <div class="ovd">性别：<label class="marr05 fs7"><input class="aui-radio" type="radio" name="sex" checked> 男</label><label class="fs7"><input class="aui-radio" type="radio" name="sex"> 女</label></div>
+        <div class="common_phone" data-value="13772463128">电话号码：13772463128</div>
+        <span class="handle">
+          <span class="no_select"></span>
+          <span class="delete hide" tapmode onclick="openDialog('text')"></span>
+        </span>
+    </div>
+    <div class="aui-grid ubb pad075 marb05 fs7 lin165 pstr user_info">
+        <div class="ovd"><div class="w35 fl">姓名：<span class="common_name" data-value="李娜娜">李娜娜</span></div><span class="fl marl10 w35"><em class="set_default">设为默认</em></span><span class="fl w30 edit hide txc c_0082d2">编辑</span></div>
+        <div class="common_code" data-type='30001' data-value="610525950521242">身份证号：610525950521242</div>
+        <div class="common_phone" data-value="13522463125">电话号码：13522463125</div>
+        <span class="handle">
+            <span class="no_select"></span>
+            <span class="delete hide" tapmode onclick="openDialog('text')"></span>
+        </span>
+    </div>
+
+    <div class="people_action mart10 padt075 txc hide">
+        <a href="javascript:;" id="add_people" class="ice_btn ice_btn_primary block mar_auto h_auto fs75 w65 bradius5">+ 添加常用联系人</a>
+    </div>
+  </div>
+  <div class="common_people" id="edit_common_people">
+      <div class="aui-grid flex_between pad075 ubb">
+        <div class="edit_state fs7 c_999">正在编辑常用人信息</div>
+        <div class="edit_action">
+          <input type="button" value="取消" class="ice_btn_gray cancle_edit padl10 padr10 marl03" name="cancle">
+        </div>
+      </div>
+      <div class="people_list">
+        <ul class="aui-list aui-form-list bg_fff padt5 padb5 ubb">
+            <li class="aui-list-item ub0 marb0">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label fs7">姓　　名：</div>
+                    <div class="aui-list-item-input">
+                        <input type="text" name="name" class="txl fs7" id="realname" value="" placeholder="与证件名字一致">
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item ub0 marb0">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label right_down_real_arrow pstr fs7">
+                      <input type="hidden" class="selectInput" name="paperid" id="paperId" value="30001">
+                      <div id="showPaper" class="paper w10 txl fs7" data-id="30001" data-value="身份证" onclick="selectDom(this,paper_data)">身份证</div>
+                      <span class="colon fs7" style="position: absolute; right: 0;">：</span>
+                    </div>
+                    <div class="aui-list-item-input">
+                        <input type="number" class="txl fs7" id="pincode" value="" placeholder="请输入证件号码">
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item ub0 marb0 isHide" style="display:none">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label fs7">出生日期：</div>
+                    <div class="aui-list-item-input">
+                        <input type="text" class="fs7 birth" data-options="{&quot;type&quot;:&quot;date&quot;,&quot;beginYear&quot;:1949,&quot;endYear&quot;:2010}" id="birthday" onclick="dtpicker(this)" value="" placeholder="必填" readonly style="width:85%">
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item ub0 marb0 isHide" style="display:none">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label fs7">性　　别：</div>
+                    <div class="aui-list-item-input txl">
+                      <label class="marr05 fs7"><input class="aui-radio" type="radio" name="sex" checked="checked"> 男</label>
+                      <label class="fs7"><input class="aui-radio" type="radio" name="sex"> 女</label>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item ub0 marb0">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-label fs7">电话号码：</div>
+                    <div class="aui-list-item-input">
+                        <input type="number" class="txl fs7" id="phone" value="" placeholder="请输入手机号码">
+                    </div>
+                </div>
+            </li>
+
+            <li class="save_people">保存</li>
+        </ul>
+      </div>
+
+  </div>
+
+  <div id="outerdiv" style="position:fixed;top:0;left:0;background:#000;z-index:999;width:100%;height:100%;display:none;">
+    <div id="innerdiv" style="position:absolute;">
+        <img id="bigimg" src="" />
+    </div>
+  </div>
+
+  <div class="ice_shade"></div>
+  <script type="text/javascript" src="./script/api.js"></script>
+  <script type="text/javascript" src="./script/aui-dialog.js"></script>
+  <script type="text/javascript" src="./script/data.js"></script>
+  <script type="text/javascript" src="./script/iosSelect.js"></script>
+  <script type="text/javascript" src="./script/mui.min.js"></script>
+  <script type="text/javascript" src="./script/mui.picker.min.js"></script>
+  <script type="text/javascript" src="./script/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript">
+      var allTotal = 0, //总价格
+          personNum = 1, //初始化人数
+          Bprice=0; //基础价总计
+          trafficTotal=0, // 交通价
+          serviceTotal=0, // 增值服务价
+          destination=0, // checkbox选择价
+          incremenTotal=0, // 商品服务价
+          fewTotal=0, //优惠价
+          few=3, // 优惠条件设定人数
+          iceCoinPrice=30;//初始化冰币金额，具体冰币换算请在后台换算
+          iceCoinTotal=0, //初始化使用冰币金额
+          couponTotal=0, //优惠券使用金额
+          myicecointotal=35;
+
+      $(document).ready(function() {
+        basicPrice=$('#basicPrice').text(); //取基础价
+        $('#few').text(few);//赋值优惠人数
+        $('#iceCoin_allPrice').text(iceCoinPrice);//初始化赋值冰币金额
+        var icemoney = myicecointotal*0.1;
+        if(myicecointotal>=10) {$('.iceSwitch').show()} else {$('.iceSwitch').show()};
+        var is_use = Math.trunc(icemoney)*10;
+        var use_money = Math.trunc(icemoney);
+        $('#myicecoin').text('共'+myicecointotal+'冰币，可用'+is_use+'冰币，抵 ¥'+use_money+'.00');
+        changePersons();
+        reckonTotal();
+      });
+
+      function changePersons() {//参与人数及优惠统计
+        var persons = $('.personItem');
+        personNum = persons.length;
+        Bprice = 0;
+        Bprice = personNum * basicPrice;
+        $('#personNum').text(personNum);
+        $('#personNumber').text(personNum);
+        if(personNum>=few) {
+          var discountPrice=$('#discount').text();
+          fewTotal = discountPrice * personNum;
+        } else {
+          fewTotal = 0;
+        }
+      }
+
+      function reckonTotal() {//费用统计
+        allTotal = Bprice + trafficTotal + destination + serviceTotal + incremenTotal + fewTotal - iceCoinTotal + couponTotal;
+        console.log(allTotal+"-"+Bprice+"-"+serviceTotal+"-"+destination +"-"+incremenTotal+"/"+fewTotal+"/"+iceCoinTotal)
+        $("#allTotal").text(allTotal);
+      }
+
+      function getCheckbox(obj) {//checkbox选择价统计
+         var thisPrice=parseInt($(obj).val());
+         if($(obj).is(':checked')) {
+           $(obj).attr('checked','checked');
+           destination+=thisPrice;
+         } else {
+           $(obj).removeAttr('checked','checked');
+           destination = destination - thisPrice;
+         }
+         reckonTotal();
+      };
+
+      function dtpicker(obj) {//日期选择
+            mui.init();
+            var value;
+            var _self = $(obj);
+            if(_self.picker) {
+              _self.picker.show(function (rs) {
+                $(obj).val(rs.text);
+                _self.picker.dispose();
+                _self.picker = null;
+              });
+            } else {
+              var optionsJson = $(obj).attr('data-options') || '{}';
+              var options = JSON.parse(optionsJson);
+              var id = $(obj).attr('id');
+              _self.picker = new mui.DtPicker(options);
+              _self.picker.show(function (rs) {
+                $(obj).val(rs.text);
+                _self.picker.dispose();
+                _self.picker = null;
+              });
+            }
+      };
+
+      function selectDom(obj,type) {//select选择
+        var id1 = $(obj).attr("id");
+        var id2 = $(obj).prev('.selectInput').attr("id");
+        var showDom = $(id1);
+        var IdDom = $(id2);
+        var inputId = showDom.data['id'];
+        var inputName = showDom.data['value'];
+        var inputPrice = showDom.data['price'];
+        var showPrice = $(obj).attr("data-price");
+        if(coupon_data.length==0) {
+          alert('您还没有优惠券');
+          return;
+        }
+        var inputSelect = new IosSelect(1,[type],{
+                itemHeight: 35,
+                itemShowCount: 7,
+                oneLevelId: inputId,
+                showAnimate:true,
+                callback: function (selectOneObj) {
+                    $(obj).prev('.selectInput').attr("value",selectOneObj.id);
+                    $(obj).text(selectOneObj.value);
+                    $(obj).attr("data-id",selectOneObj.id);
+                    $(obj).attr("data-value",selectOneObj.value);
+                    var selectValue = $(obj).prev('.selectInput').attr("value");
+                    var selectId = $(obj).prev('.selectInput').attr("id");
+                    if(type==traffic_data) {
+                      $(obj).attr("data-price",selectOneObj.price);
+                      if(showPrice==undefined) {
+                        trafficTotal += parseInt(selectOneObj.price);
+                      } else {
+                        trafficTotal = trafficTotal - showPrice;
+                        trafficTotal += parseInt(selectOneObj.price);
+                      }
+                    }
+                    if(type==coupon_data) {
+                      $(obj).attr("data-price",selectOneObj.price);
+                      if(showPrice==undefined) {
+                        couponTotal += parseInt(selectOneObj.price);
+                      } else {
+                        couponTotal = couponTotal - showPrice;
+                        couponTotal += parseInt(selectOneObj.price);
+                      }
+                    }
+                    if(selectValue==30001) {
+                      $(obj).parents(".aui-list").children(".isHide").css('display','none');
+                      $(obj).parents(".aui-list").find(".pincode").attr("name","cardId");
+                    } else if(selectValue==30002) {
+                      $(obj).parents(".aui-list").children(".isHide").css('display','block');
+                      $(obj).parents(".aui-list").find(".pincode").attr("name","passport");
+                    } else if(selectValue==30003) {
+                      $(obj).parents(".aui-list").children(".isHide").css('display','block');
+                      $(obj).parents(".aui-list").find(".pincode").attr("name","other");
+                    }
+                    changePersons();
+                    reckonTotal();
+              }
+        });
+      }
+
+      var items = 1;
+  	  var additems = function () {//从数增加
+  	        var str = "<div class='personItem'><div class='person_info marr380'><ul class='aui-list aui-form-list'><li class='aui-list-item'><div class='aui-list-item-inner'><div class='aui-list-item-label fs7'>真实姓名：</div><div class='aui-list-item-input'><input type='text' name='real_name' class='real_name txr fs7' id=relname_"+items+" placeholder='与证件名字一致'></div></div></li><li class='aui-list-item'><div class='aui-list-item-inner'><div class='aui-list-item-label right_down_real_arrow pstr fs7'><input type='hidden' class='selectInput' name='paper_id' id=paperId_"+items+" value='30001'><div id=showPaper_"+items+" class='paper w10 txl fs7' data-id='30001' data-value='身份证' onclick='selectDom(this,paper_data)'>身份证</div><span class='colon fs7' style='position: absolute; right: -2px;'>：</span></div><div class='aui-list-item-input'><input type='number' name='cardId' class='pincode txr fs7' id=paper_code_"+items+" placeholder='必填'></div></div></li>";
+                str += "<li class='aui-list-item isHide' style='display:none'><div class='aui-list-item-inner'><div class='aui-list-item-label fs7'>出生日期：</div><div class='aui-list-item-input'><input type='text' data-options='{\"type\":\"date\",\"beginYear\":1949,\"endYear\":2010}' class='txr fs7 birth' onclick='dtpicker(this)' id=birthshow_"+items+" placeholder='必填' readonly></div></div></li>";
+                str += "<li class='aui-list-item isHide' style='display:none'><div class='aui-list-item-inner'><div class='aui-list-item-label fs7'>性　　别：</div><div class='aui-list-item-input txr'><label class='marr05 fs7'><input class='aui-radio' type='radio' name=sex_"+items+"> 男</label><label class='fs7'><input class='aui-radio' type='radio' name=sex_"+items+"> 女</label></div></div></li>";
+                str += "<li class='aui-list-item'><div class='aui-list-item-inner'><div class='aui-list-item-label fs7'>电话号码：</div><div class='aui-list-item-input'><input type='number' name='phone' class='phone txr fs7' id=phone_"+items+" placeholder='必填'></div></div></li>";
+                str += "<li class='aui-list-item'><div class='aui-list-item-inner'><div class='aui-list-item-label fs7'>交通方式：</div><div class='aui-list-item-input'><div class='right_down_real_arrow txr fs7'><input type='hidden' class='selectInput' name=traffic_id"+items+" id=trafficId_"+items+"><div id=showTraffic_"+items+" class='traffic txr fs7' onclick='selectDom(this,traffic_data)'>请您选择</div></div></div></div></li>";
+                str += "<li class='aui-list-item'><div class='aui-list-item-inner'><div class='aui-list-item-label fs7' style='width:100%;'>关口或目的地集合：</div><div class='aui-list-item-input txr'><label><span class='txc fs7 marr10e'><em class='c_0082d2'>-20</em>元</span><input class='aui-checkbox' type='checkbox' value='-20' onchange='getCheckbox(this)' name='destination'></label></div></div></li>";
+                str += "<li class='aui-list-item'><div class='aui-list-item-inner'><div class='aui-list-item-label fs7' style='width:100%;'>机票代订(多退少补)：</div><div class='aui-list-item-input txr'><label><span class='txc fs7 marr10e'><em class='c_0082d2'>+1200</em>元</span><input class='aui-checkbox' type='checkbox' value='+1200' onchange='getCheckbox(this)' name='ticket'></label></div></div></li>";
+                str += "</ul></div><span class='del_btn'></span></div>"
+            $("#persons").append(str);
+  	        items++;
+            changePersons();
+            reckonTotal();
+  	        $('.add_btn').unbind('click').bind('click', additems);
+  	        $('.del_btn').unbind('click').bind('click', delitem);
+  	  };
+
+      var delitem = function () {//人数递减
+           var parent = $(this).parent();
+           var trafficPrice = parent.find('.traffic').attr('data-price');
+           var destinationPrice = parent.find('input[name=destination]').attr('value');
+           var ticketPrice = parent.find('input[name=ticket]').attr('value');
+           if(trafficPrice!=undefined) {
+             trafficTotal=trafficTotal-trafficPrice;
+           }
+           if(parent.find('input[name=destination]').is(':checked')){
+             destination=destination-destinationPrice;
+           }
+           if(parent.find('input[name=ticket]').is(':checked')){
+             destination=destination-ticketPrice;
+           }
+  	       parent.remove();
+           changePersons();
+           reckonTotal();
+  	  };
+
+      $('.add_btn').unbind('click').bind('click', additems);
+
+      // $('.spinner').spinner(); //自加自减
+
+      $('#details').click(function() {//查看费用明细
+        $('.ice_shade').addClass('ice_mask_in');
+        $('#detailed').addClass('ice_dialog_in');
+      })
+
+      $('.ice_select').click(function() {//使用冰币
+        $('.ice_shade').addClass('ice_mask_in');
+        $('#iceCoinSelect').addClass('ice_dialog_in');
+      })
+
+      $('.ice_btn_cancle').click(function() {//点击取消按钮
+        $('#iceCoin').removeClass('ice_dialog_in');
+        $('#iceCoinSelect').removeClass('ice_dialog_in');
+        $('.ice_shade').removeClass('ice_mask_in');
+        $('#error').hide().text('');
+      })
+
+      $('.ice_btn_confirm').click(function() {//点击使用按钮
+        var use_iceCoin=$('#iceCoin_Price').val();
+        if(iceCoinPrice==0) {
+          $('#error').show().text('您还没有冰币，快去赚冰币哦');
+          return;
+        } else {
+          if(use_iceCoin>iceCoinPrice) {
+            $('#error').show().text('冰币余额不足，请重新输入');
+            return;
+          } else {
+            if(use_iceCoin=='') {
+              $('#error').show().text('使用冰币的金额不能为空');
+              return;
+            } else if(use_iceCoin==0){
+              $('#error').show().text('使用冰币金额不能为0');
+              return;
+            } else {
+              $('#iceCoin_used').text('冰币抵扣'+use_iceCoin+'元');
+              var used_iceCoin = $('input[name=iceCoin]').attr('value');
+              $('#error').hide().text('');
+              if(used_iceCoin==undefined) {
+                iceCoinTotal = use_iceCoin;
+              } else {
+                iceCoinTotal = iceCoinTotal -used_iceCoin + use_iceCoin;
+              }
+              iceCoinPrice = iceCoinPrice - use_iceCoin; //剩余冰币金额
+              $('#iceCoin_allPrice').text(iceCoinPrice);
+              $('#iceCoin').removeClass('ice_dialog_in');
+              $('.ice_shade').removeClass('ice_mask_in');
+              $('input[name=iceCoin]').attr("checked",'checked').attr('value',use_iceCoin);
+              reckonTotal();
+            }
+          }
+        }
+      })
+
+      $('.ice_shade').click(function() {//点击遮罩关闭
+        $(this).removeClass('ice_mask_in');
+        if($('.ice_dialog').hasClass('ice_dialog_in')) {
+          $('.ice_dialog').removeClass('ice_dialog_in');
+        }
+      })
+
+      $("#open_common_people").click(function() {//打开常用人
+        $("#common_people").addClass('common_people_in')
+        var commonPeopleNum=$(".user_info");
+        if(commonPeopleNum.length==0) {
+          alert('您还没有添加常用人信息，请尽快添加');
+          $('.people_action').removeClass('hide')
+        }
+      })
+
+      $('.user_info').on('click',function() {//选择常用人
+          if($(this).hasClass("selected")) {
+              $(this).removeClass('selected');
+              $(this).find(".select").removeClass("select").addClass("no_select");
+          } else {
+              $(this).addClass('selected');
+              $(this).find(".no_select").removeClass("no_select").addClass("select");
+          }
+      });
+      $('.user_info .set_default').click(function(e) {//设为默认
+        e.stopPropagation();
+        var parents = $(this).parents('.user_info');
+        $(this).removeClass("set_default").addClass("get_default").text('默认');
+        parents.addClass('selected');
+        parents.siblings().removeClass('selected');
+        parents.find(".no_select").removeClass("no_select").addClass("select");
+        parents.siblings().find('.get_default').removeClass('get_default').addClass("set_default").text('设为默认');
+        parents.siblings().find(".select").removeClass("select").addClass("no_select");
+      })
+      //选择常用人后拉取数据并赋值
+      $('.action .confirm').on('tap', function(){
+         $('.del_btn').trigger("click");
+         var item = $('.selected');
+         var personInfos = [];
+         item.each(function(i) {
+           var relname = $(this).find('.common_name').attr('data-value');
+           var codeType = $(this).find('.common_code').attr('data-type');
+           var code = $(this).find('.common_code').attr('data-value');
+           var phone = $(this).find('.common_phone').attr('data-value');
+           personInfos.push({relname,codeType,code,phone});
+         });
+         $(".common_people").removeClass('common_people_in');
+         for (var i = 0; i < personInfos.length-1; i++) {
+           additems();
+         }
+         var personItem = $('.persons .personItem');
+
+         personItem.each(function(index,obj){
+            $(obj).find('.real_name').val(personInfos[index].relname);
+     		    $(obj).find('.pincode').val(personInfos[index].code);
+            $(obj).find('.phone').val(personInfos[index].phone);
+            var codeType = $(obj).find('.selectInput').attr("value");
+            if(codeType!=personInfos[index].codeType) {
+              $(obj).find('.selectInput').attr("value",personInfos[index].codeType);
+              $(obj).find('.paper').attr("data-id",personInfos[index].codeType);
+              if(personInfos[index].codeType==30001) {
+                $(obj).find('.paper').text("身份证");
+                $(obj).find('.paper').attr("data-value","身份证");
+                $(obj).find('.paper').parents(".aui-list").children(".isHide").hide();
+              } else if(personInfos[index].codeType==30002) {
+                $(obj).find('.paper').text("护照");
+                $(obj).find('.paper').attr("data-value","护照");
+                $(obj).find('.paper').parents(".aui-list").children(".isHide").show();
+              } else if(personInfos[index].codeType==30003) {
+                $(obj).find('.paper').text("其他");
+                $(obj).find('.paper').attr("data-value","其他");
+                $(obj).find('.paper').parents(".aui-list").children(".isHide").show();
+              }
+            }
+         })
+
+      });
+
+      $('.action .edit_people').click(function() {//点击常用人编辑按钮
+          $(this).parent('.action').children('.cancel_edit').removeClass('hide');
+          $(this).parent('.action').children('.confirm').addClass('hide');
+          $('.user_info .edit').removeClass('hide');
+          $('.user_info .handle').find('.select').addClass('hide');
+          $('.user_info .handle').find('.no_select').addClass('hide');
+          $('.user_info .delete').removeClass('hide');
+          $('.people_action').removeClass('hide');
+      })
+
+      $('.action .cancel_edit').click(function() {//取消编辑
+          $(this).parent('.action').children('.cancel_edit').addClass('hide');
+          $(this).parent('.action').children('.confirm').removeClass('hide');
+          $('.user_info .edit').addClass('hide');
+          $('.user_info .handle').find('.select').removeClass('hide');
+          $('.user_info .handle').find('.no_select').removeClass('hide');
+          $('.user_info .delete').addClass('hide');
+          $('.people_action').addClass('hide');
+      })
+//点击单个编辑
+      $('.user_info .edit').click(function(e) {
+        $("#edit_common_people").addClass('common_people_in');
+        var real_name = $(this).parent().find('.common_name').attr('data-value');
+        var code_type = $(this).parent().next('.common_code').attr('data-type');
+        var code_value = $(this).parent().next('.common_code').attr('data-value');
+        var phone = $(this).parents('.user_info ').find('.common_phone').attr('data-value');
+        var birthday = $(this).parents('.user_info ').find('.common_birth').attr('data-value');
+
+        if(birthday=='') {
+          if(code_value.length == 15) {
+              birthday = "19"+code_value.substr(6,6);
+          } else if(code_value.length == 18){
+              birthday = code_value.substr(6,8);
+          }
+          birthday = birthday.replace(/(.{4})(.{2})/,"$1-$2-");
+        }
+
+        var last = code_value[code_value.length - 2];
+        if(last % 2 != 0){
+           alert('男')
+        }else{
+           alert('女')
+        }
+
+        $('#realname').attr('value',real_name);
+        $('#paperId').attr('value',code_type);
+        $('#showPaper').attr('data-id',code_type);
+        $('#birthday').attr('value',birthday);
+        if(code_type==30001) {
+          $('#showPaper').attr('data-value','身份证').text('身份证');
+        }else if(code_type==30002) {
+          $('#showPaper').attr('data-value','护照').text('护照');
+        }else if(code_type==30003) {
+          $('#showPaper').attr('data-value','其他').text('其他');
+        }
+        $('#pincode').attr('value',code_value);
+        $('#phone').attr('value',phone);
+        e.stopPropagation();
+      })
+
+      $('#add_people').on('click',function() {
+        $("#edit_common_people").addClass('common_people_in');
+        $("#edit_common_people").find('.edit_state').text('正在添加常用人信息')
+      });
+
+      $('.edit_action .cancle_edit').click(function() {//点击单个编辑
+        $("#edit_common_people").removeClass('common_people_in');
+        $('.action .cancel_edit').addClass('hide');
+        $('.action .confirm').removeClass('hide');
+        $('.user_info .edit').addClass('hide');
+        $('.user_info .handle').find('.select').removeClass('hide');
+        $('.user_info .handle').find('.no_select').removeClass('hide');
+        $('.user_info .delete').addClass('hide');
+        $('.people_action').addClass('hide');
+      })
+      $('.colse_poup').click(function() {//点击关闭按钮关闭
+        $('.ice_shade').removeClass('ice_mask_in');
+        $('.ice_dialog').removeClass('ice_dialog_in');
+      })
+
+      $('.spinner .value').attr('value','0');//初始化值为0
+      //增值服务价格统计
+      var ice_decreases = $('.ice_service .decrease');
+      var ice_increases = $('.ice_service .increase');
+      ice_increases.each(function(i,ice_increase){
+        ice_increase.addEventListener('tap',function(){
+          var unitePrice = parseInt($(this).parents('.ice_service').find('.unitPrice').text());
+          var inputVal = $(this).parents('.ice_service').find('.value').val();
+          inputVal++;
+          $(this).prev('.value').attr('value',inputVal);
+          serviceTotal+= unitePrice;
+          reckonTotal();
+        });
+      });
+      ice_decreases.each(function(i,ice_decrease){
+        ice_decrease.addEventListener('tap',function(){
+          var unitePrice = parseInt($(this).parents('.ice_service').find('.unitPrice').text());
+          var inputVal = $(this).parents('.ice_service').find('.value').val();
+          if(inputVal>=1) {
+            inputVal--;
+            $(this).next('.value').attr('value',inputVal);
+            serviceTotal-= unitePrice;
+          } else {
+            return false;
+          }
+          reckonTotal();
+        });
+      });
+
+      //商品服务价格统计
+      var decreases = $('.incremen .decrease');
+      var increases = $('.incremen .increase');
+      increases.each(function(i,increase){
+        increase.addEventListener('tap',function(){
+          var unitePrice = parseInt($(this).parents('.incremen').find('.unitPrice').text());
+          var inputVal = $(this).prev().val();
+          inputVal++;
+          $(this).prev('.value').attr('value',inputVal);
+          incremenTotal+= unitePrice;
+          reckonTotal();
+        });
+      });
+      decreases.each(function(i,decrease){
+        decrease.addEventListener('tap',function(){
+          var unitePrice = parseInt($(this).parents('.incremen').find('.unitPrice').text());
+          var inputVal = $(this).next().val();
+          if(inputVal>=1) {
+            inputVal--;
+            $(this).next('.value').attr('value',inputVal);
+            incremenTotal-= unitePrice;
+          }
+          reckonTotal();
+        });
+      });
+
+      $('input[name=payment]').on('click',function() {//选择支付方式
+        var payType=$(this).val();
+        if($(this).is(':checked')) {
+          if(payType=='wxpay') {
+            alert('微信支付');
+          } else if(payType=='alipay') {
+            alert('支付宝支付');
+          }
+        }
+      });
+
+    $(function(){
+        $(".incremen .pimg").click(function(){
+            var _this = $(this);//将当前的pimg元素作为_this传入函数
+            imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);
+        });
+    });
+
+    function imgShow(outerdiv, innerdiv, bigimg, _this){
+        var src = _this.attr("src");//获取当前点击的pimg元素中的src属性
+        $(bigimg).attr("src", src);//设置#bigimg元素的src属性
+
+            /*获取当前点击图片的真实大小，并显示弹出层及大图*/
+        $("<img/>").attr("src", src).load(function(){
+            var windowW = $(window).width();//获取当前窗口宽度
+            var windowH = $(window).height();//获取当前窗口高度
+            var realWidth = this.width;//获取图片真实宽度
+            var realHeight = this.height;//获取图片真实高度
+            var imgWidth, imgHeight;
+            var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
+
+            if(realHeight>windowH*scale) {//判断图片高度
+                imgHeight = windowH*scale;//如大于窗口高度，图片高度进行缩放
+                imgWidth = imgHeight/realHeight*realWidth;//等比例缩放宽度
+                if(imgWidth>windowW*scale) {//如宽度扔大于窗口宽度
+                    imgWidth = windowW*scale;//再对宽度进行缩放
+                }
+            } else if(realWidth>windowW*scale) {//如图片高度合适，判断图片宽度
+                imgWidth = windowW*scale;//如大于窗口宽度，图片宽度进行缩放
+                            imgHeight = imgWidth/realWidth*realHeight;//等比例缩放高度
+            } else {//如果图片真实高度和宽度都符合要求，高宽不变
+                imgWidth = realWidth;
+                imgHeight = realHeight;
+            }
+                    $(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放
+
+            var w = (windowW-imgWidth)/2;//计算图片与窗口左边距
+            var h = (windowH-imgHeight)/2;//计算图片与窗口上边距
+            $(innerdiv).css({"top":h, "left":w});//设置#innerdiv的top和left属性
+            $(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg
+        });
+
+        $(outerdiv).click(function(){//再次点击淡出消失弹出层
+            $(this).fadeOut("fast");
+        });
+    }
+
+      function isChinaName(name) {// 验证中文名称
+       var pattern = /^[\u4E00-\u9FA5]{1,6}$/;
+       return pattern.test(name);
+      }
+
+      function isPhone(phone) {// 验证手机号
+       var pattern = /^1[34578]\d{9}$/;
+       return pattern.test(phone);
+      }
+
+      function isCard(cardId) { // 验证身份证
+       var pattern = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+       return pattern.test(cardId);
+      }
+
+      function ispassport(passport) {//验证护照
+        var pattern = /^1[45][0-9]{7}$|([P|p|S|s]\d{7}$)|([S|s|G|g]\d{8}$)|([Gg|Tt|Ss|Ll|Qq|Dd|Aa|Ff]\d{8}$)|([H|h|M|m]\d{8,10})$/;
+        return pattern.test(passport);
+      }
+
+      function formValidate() {
+        var str = '';
+        var name=$('input[name=real_name]');
+        var cardId=$('input[name=cardId]');
+        var passport=$('input[name=passport]');
+        var other=$('input[name=other]');
+        var phone=$('input[name=phone]');
+
+        // 验证姓名
+        name.each(function() {
+          if($.trim($(this).val()).length == 0) {
+            str += '请输入您的真实姓名\n';
+            $(this).focus();
+            alert(str);
+            return false;
+          } else {
+            if(isChinaName($.trim($(this).val())) == false) {
+             str += '您输入的真实姓名不合法\n';
+             alert(str);
+             $(this).focus();
+             return false;
+            }
+          }
+        });
+        // 验证身份证
+        cardId.each(function() {
+          if($.trim($(this).val()).length == 0) {
+             str += '请输入您的身份证号码\n';
+             alert(str);
+             $(this).focus();
+             return false;
+          } else {
+             if(isCard($.trim($(this).val())) == false) {
+              str += '您输入的身份证号不正确\n';
+              alert(str);
+              $(this).focus();
+              return false;
+             }
+          }
+        });
+        // 验证护照
+        passport.each(function() {
+          if($.trim($(this).val()).length == 0) {
+             str += '请输入您的护照号码\n';
+             alert(str);
+             $(this).focus();
+             return false;
+          } else {
+             if(ispassport($.trim($(this).val())) == false) {
+              str += '您输入的护照号码不正确\n';
+              alert(str);
+              $(this).focus();
+              return false;
+             }
+          }
+        });
+        // 验证其他
+        other.each(function() {
+          if($.trim($(this).val()).length == 0) {
+             str += '请输入您的证件号码\n';
+             alert(str);
+             $(this).focus();
+             return false;
+          }
+        });
+        //验证手机号码
+        phone.each(function() {
+          if($.trim($(this).val()).length == 0) {
+             str += '请输入您的手机号码\n';
+             alert(str);
+             $(this).focus();
+             return false;
+          } else {
+             if(isPhone($.trim($(this).val())) == false) {
+              str += '您输入的手机号码不正确\n';
+              alert(str);
+              $(this).focus();
+              return false;
+             }
+          }
+        });
+      }
+
+      var dialog = new auiDialog();
+      function openDialog(type){
+          // e.stopPropagation();
+          switch (type) {
+              case "text":
+                  dialog.alert({
+                      title:"操作提示",
+                      msg:'确定要删除此联系人的信息吗？',
+                      buttons:['取消','确定']
+                  },function(ret){
+                      console.log(ret)
+                  })
+                  break;
+          }
+      }
+
+      $('#submit').on('click', function() {
+        formValidate();
+      });
+      
+      function checkbox(checkbox) {
+			if (checkbox.checked == true){
+				$("#icecoin_id").attr('value',1);
+				$('#use_coin').show();
+				$('#agreebox').removeClass('padt5');
+			} else {
+				$("#icecoin_id").attr('value',0);
+				$('#use_coin').hide();
+				$('#agreebox').addClass('padt5');
+			}
+	}
+  </script>
+</body>
+</html>

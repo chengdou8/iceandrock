@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>购买会员</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iceandrock.css" />
+    <style>.ice_btn_confirm {flex:2}</style>
+</head>
+
+<body>
+<div class="aui-content" style="padding-bottom:0;">
+    <div class="ice_buy_head pstr"><img src="./images/buy_head.jpg" class="w10" /><span class="buy_tips">超级会员说明</span></div>
+    <div class="aui-grid padb075 mart10">
+      <ul class="ice_buy_list">
+        <li class="ice_buy_item">
+          <div class="fs7">购买方式：</div>
+          <div class="ice_buy_inner">
+            <label class="marr05 fs7"><input class="aui-radio" type="radio" name="payment" value="wxpay" checked=""> 微信支付</label>
+            <label class="fs7"><input class="aui-radio" type="radio" name="payment" value="alipay"> 支付宝支付</label>
+          </div>
+        </li>
+        <li class="ice_buy_item">
+          <div class="fs7">购买年限：</div>
+          <div class="ice_buy_inner">
+            <label class="marr05 fs7"><input class="aui-radio" type="radio" name="limit" value="halfYear" checked=""> 半年</label>
+            <label class="fs7"><input class="aui-radio" type="radio" name="limit" value="oneYear"> 一年</label>
+          </div>
+        </li>
+        <li class="ice_buy_item">
+          <div class="fs7">应付金额：</div>
+          <div class="ice_buy_inner c_f00">¥256</div>
+        </li>
+      </ul>
+
+      <div class="padt075 mart075 txc">
+        <input type="button" class="ice_btn ice_buy_btn" value="立即购买" />
+      </div>
+      <div class="padt5 padb075 txc">
+        <label><input class="aui-checkbox" type="checkbox" name="name2"><span class="fs625 c_666 marl03">我已阅读并同意<em class="c_0082d2">《冰岩旅游协议》</em></span></label>
+      </div>
+    </div>
+
+    <div class="aui-grid mart10">
+      <div class="rightsTitle fs75 txc"><span>冰岩超级会员 享专属特权</span></div>
+      <div class="rightsTitle_row ovd padb05">
+          <div class="aui-col-xs-4">
+            <div class="aui-grid-img"><img src="./images/icon/icon_rights.png"></div>
+            <div class="aui-grid-label"><a href="" class="c_232323">特权一</a><div class="fs6 c_888">部分活动会员价</div></div>
+          </div>
+          <div class="aui-col-xs-4">
+            <div class="aui-grid-img"><img src="./images/icon/icon_rights.png"></div>
+            <div class="aui-grid-label"><a href="" class="c_232323">特权二</a><div class="fs6 c_888">额外会员福利</div></div>
+          </div>
+          <div class="aui-col-xs-4">
+            <div class="aui-grid-img"><img src="./images/icon/icon_rights.png"></div>
+            <div class="aui-grid-label">特权三<div class="fs6 c_888">生日当天免费参加</div></div>
+          </div>
+          <div class="aui-col-xs-4">
+            <div class="aui-grid-img pstr"><img src="./images/icon/icon_rights.png"></div>
+            <div class="aui-grid-label">特权四<div class="fs6 c_888">......</div></div>
+          </div>
+          <div class="aui-col-xs-4">
+            <div class="aui-grid-img"><img src="./images/icon/icon_rights.png"></div>
+            <div class="aui-grid-label">特权五<div class="fs6 c_888">......</div></div>
+          </div>
+          <div class="aui-col-xs-4">
+            <div class="aui-grid-img"><img src="./images/icon/icon_rights.png"></div>
+            <div class="aui-grid-label">特权六<div class="fs6 c_888">......</div></div>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="ice_dialog" style="margin-top:-180px;">
+  <div class="ice_dialog_header">会员说明</div>
+  <div class="ice_dialog_content padl10e padb075 padr075 fs7 c_666 txl">
+    <div>请仔细阅读冰岩探旅网站VIP会员政策条款：</div>
+    <div>成为冰岩VIP会员后享受：</div>
+    <div>1. 网站报名冰岩活动享受VIP会员超低活动价；</div>
+    <div>2. 冰岩会员活动日，享受特殊礼品等；</div>
+    <div>3. 不定期获赠额外会员福利；</div>
+    <div>4. VIP会员在享受以上特权外同时可获得与消费金额对应的积分；</div>
+    <div>如何成为VIP会员？</div>
+    <div>1. 用户从微信端进入个人中心 - 点击头像旁边的会员升级链接 - 选择会员有效期类型，支付相应费用即可成为冰岩VIP会员；</div>
+    <div>2. 冰岩会元费用：198元/半年；299元/年。</div>
+  </div>
+  <div class="ice_dialog_footer ubt">
+      <div class="ice_dialog_btn ice_btn_cancle ubr">不了</div>
+      <div class="ice_dialog_btn ice_btn_confirm"><a href="">立即开通<span class="fs6 c_888">（冰岩会员特惠）</span></a></div>
+  </div>
+</div>
+<div class="ice_shade"></div>
+<script type="text/javascript" src="./script/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+ $('.buy_tips').on('click',function() {
+   $('.ice_dialog').addClass('ice_dialog_in');
+   $('.ice_shade').addClass('ice_mask_in');
+   $('body').addClass('ovd');
+ })
+ $('.ice_btn_cancle').on('click',function() {
+   $('.ice_dialog').removeClass('ice_dialog_in');
+   $('.ice_shade').removeClass('ice_mask_in');
+   $('body').removeClass('ovd');
+ })
+</script>
+</body>
+</html>

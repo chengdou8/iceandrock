@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./font/fontawesome-webfont.eot?v=3.2.1');
+  src: url('./font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('./font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('./font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('./font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.scorejs {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    font-size: 0.785rem;
+    color: #69c2f8;
+    float: left;
+    padding-right: 10px;
+}
+
+.scorejs > .score-item,
+.scorejs > .score-item-static {
+    font-family: FontAwesome, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+}
+
+.scorejs.score-vertical > .score-item,
+.scorejs.score-vertical > .score-item-static {
+    display: list-item;
+}
+
+.scorejs > .score-item:hover {
+    cursor: pointer;
+}
+
+.scorejs > .score-item-static:hover {
+    cursor: default;
+}
+
+.scorejs > .score-item:before {
+    content: "\2606"; /* ☆ */
+    _content: "\2740";
+    padding: 2px;
+}
+
+.scorejs > .score-item-static:before {
+    content: "\2606"; /* ☆ */
+    _content: "\2740";
+    padding: 2px;
+}
+
+.scorejs > .score-item:hover:before,
+.scorejs > .score-item:hover ~ .score-item:before {
+    content: "\2605"; /* ★ */
+    _content: "\273f";
+}
+
+.scorejs > .score-item.active:before,
+.scorejs > .score-item.active ~ .score-item:before {
+    content: "\2605"; /* ★ */
+    _content: "\273f";
+}
+
+.scorejs > .score-item-static.active:before {
+    content: "\2605"; /* ★ */
+    _content: "\273f";
+}
+
+/* 使用FontAwesome */
+.scorejs.fontawesome > .score-item:before {
+    content: "\f006";
+}
+
+.scorejs.fontawesome > .score-item-static:before {
+    content: "\f006";
+}
+
+.scorejs.fontawesome > .score-item:hover:before,
+.scorejs.fontawesome > .score-item:hover ~ .score-item:before {
+    content: "\f005";
+}
+
+.scorejs.fontawesome > .score-item.active:before,
+.scorejs.fontawesome > .score-item.active ~ .score-item:before {
+    content: "\f005";
+}
+
+.scorejs.fontawesome > .score-item-static.active:before {
+    content: "\f005";
+}

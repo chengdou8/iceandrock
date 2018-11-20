@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>冰岩探险旅行户外俱乐部</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iceandrock.css" />
+</head>
+<body class="bg_fff">
+  <header class="aui-bar aui-bar-nav header">
+    <a class="aui-btn aui-pull-left">
+      <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">转移活动记录</div>
+  </header>
+
+  <div class="aui-content">
+    <section class="aui-grid">
+      <div class="user_header padt075 pstr" style="min-height:225px;">
+           <div class="user_head">
+              <img src="./images/head_img02.png" />
+              <div class="user_grade">微信昵称</div>
+           </div>
+
+           <div class="txc c_fff fs625">转移给你</div>
+           <div class="padt10e txc c_0082d2 fs625">活动记录</div>
+
+           <div class="ice_action">
+             <input type="tel" class="ice_input" placeholder="请输入报名时的证件号">
+             <input type="submit" value="确定" class="ice_btn w10 fs7 ice_btn_yellow mart075">
+           </div>
+      </div>
+    </section>
+  </div>
+  <div class="transfer_bottom"></div>
+  <script type="text/javascript" src="./script/api.js"></script>
+  <script type="text/javascript" src="./script/aui-tab.js"></script>
+  <script type="text/javascript" src="./script/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript">
+      apiready = function() {
+          api.parseTapmode();
+      }
+  </script>
+</body>
+</html>

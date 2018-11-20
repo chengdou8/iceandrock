@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>冰岩探险旅行户外俱乐部</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/iceandrock.css" />
+    <style>
+    	.listItem {position:absolute; z-index:9999; border:1px solid #e4e4e4; padding:5px 12px; background-color:#f7f7f7;transition: all 0.5s ease-in-out;}
+    	.listItem li {font-size:0.625rem; line-height:1.5rem; color:#666;}
+    	.dspn {display:none;}
+    </style>
+</head>
+<body>
+  <header class="aui-bar aui-bar-nav header">
+    <a class="aui-btn aui-pull-left">
+      <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">个人中心</div>
+  </header>
+
+  <div class="aui-content">
+    <section class="aui-grid">
+      <div class="user_header padt075 pstr">
+           <a class="user_set_up">设置</a>
+           <div class="user_head pstr">
+              <img src="./images/head_img02.png" />
+              <span class="ice_vip"></span>
+              <div class="padt05 c_fff txc">微信昵称</div>
+           </div>
+           <div class="user_grade">会员等级  |  冰币：200</div>
+           <div class="flex_between w35 mar_auto c_0082d2 fs625">
+             <span class="">0关注</span>
+             <span class="">０粉丝</span>
+           </div>
+      </div>
+      <div class="flex_between mart-075e padl20e padb075 padr20e txc pstr">
+          <div class="user_item">
+            <a class="c_232323 fs75"><i class="icon_album bg_48d1b5 bradius5 marb01"></i>相册</a>
+          </div>
+          <div class="user_item">
+            <a class="c_232323 fs75"><i class="icon_achieve bg_ffa566 bradius5 marb01"></i>成就</a>
+          </div>
+          <div class="user_item">
+            <a class="c_232323 fs75"><i class="icon_account bg_67c4e5 bradius5 marb01"></i>账户</a>
+          </div>
+          <div class="user_item">
+            <a class="c_232323 fs75"><i class="icon_travels bg_fa7d79 bradius5 marb01"></i>游记</a>
+          </div>
+      </div>
+    </section>
+
+    <section class="aui-grid padl075 mart10 padr075">
+        <div class="ice_stab flex_between" style="padding-bottom:0;">
+          <a class="stab_item active">全部</a>
+          <a class="stab_item">待付款</a>
+          <a class="stab_item">处理中</a>
+          <a class="stab_item">待出行</a>
+          <a class="stab_item">待评价<span class="aui-iconfont aui-icon-right fs625 marl015"></span></a>
+        </div>
+    </section>
+    <div class="ice_stab_content">
+        <div class="no_data txc" style="padding-top:2.25rem; display:none">
+          <img src="./images/no_data.png" class="w30e" style="display:inline" />
+          <p>您还未参加过活动</p>
+        </div>
+
+        <div class="ice_order_list">
+            <div class="ice_order_list_item bg_fff padl075 padr075">
+              <div class="flex_between padt075 padb05 fs7">
+                <span class="c_232323">【五一黄金周】泰国·青迈拜县慢时光</span>
+                <span class="c_f68020">待付款</span>
+              </div>
+              <div class="ovd ubb padb10">
+                <div class="fl w35 padr10"><img src="./images/201805311621.jpg" /></div>
+                <div class="line11">
+                  <p class="fs625">订单编号：BY-1702365890</p>
+                  <p class="fs625">报名时间：2018/4/15  4:39:14 PM</p>
+                  <p class="fs625">出行时间：2017年8月3日（周五）  共4天</p>
+                </div>
+              </div>
+              <div class="flex_between padt05 padb075">
+                  <span class="c_232323 fs7">订单金额：￥50.00</span>
+                  <div class="mart-015">
+                      <a href="#" class="btn_ice btn_ice_yellow">去支付</a>
+                      <a href="#" class="btn_ice btn_ice_default">取消订单</a>
+                      <a href="#" class="btn_ice btn_ice_default">订单详情</a>
+                  </div>
+              </div>
+            </div>
+
+            <div class="ice_order_list_item bg_fff padl075 padr075 mart10">
+              <div class="flex_between padt075 padb05 fs7">
+                <span class="c_232323">【五一黄金周】泰国·青迈拜县慢时光</span>
+                <span class="c_f68020">处理中</span>
+              </div>
+              <div class="ovd ubb padb10">
+                <div class="fl w35 padr10"><img src="./images/201805311622.jpg" /></div>
+                <div class="line11">
+                  <p class="fs625">订单编号：BY-1702365890</p>
+                  <p class="fs625">报名时间：2018/4/15  4:39:14 PM</p>
+                  <p class="fs625">出行时间：2017年8月3日（周五）  共4天</p>
+                </div>
+              </div>
+              <div class="flex_between padt05 padb075">
+                  <span class="c_232323 fs7">订单金额：￥50.00</span>
+                  <div class="mart-015">
+                      <a class="btn_ice btn_ice_yellow" onclick="operation(this);">再次报名</a>
+                      <a href="#" class="btn_ice btn_ice_default">取消订单</a>
+                      <a href="#" class="btn_ice btn_ice_default">订单详情</a>
+                  </div>
+              </div>
+            </div>
+
+            <div class="ice_order_list_item bg_fff padl075 padr075 mart10">
+              <div class="flex_between padt075 padb05 fs7">
+                <span class="c_232323">【五一黄金周】泰国·青迈拜县慢时光</span>
+                <span class="c_f68020">待评价</span>
+              </div>
+              <div class="ovd ubb padb10">
+                <div class="fl w35 padr10"><img src="./images/201805311623.jpg" /></div>
+                <div class="line11">
+                  <p class="fs625">订单编号：BY-1702365890</p>
+                  <p class="fs625">报名时间：2018/4/15  4:39:14 PM</p>
+                  <p class="fs625">出行时间：2017年8月3日（周五）  共4天</p>
+                </div>
+              </div>
+              <div class="flex_between padt05 padb075">
+                  <span class="c_232323 fs7">订单金额：￥50.00</span>
+                  <div class="mart-015">
+                      <a class="btn_ice btn_ice_yellow" onclick="operation(this);">去评价</a>
+                      <a href="#" class="btn_ice btn_ice_default">取消订单</a>
+                      <a href="#" class="btn_ice btn_ice_default">订单详情</a>
+                  </div>
+              </div>
+            </div>
+
+            <div class="ice_order_list_item bg_fff padl075 padr075 mart10">
+              <div class="flex_between padt075 padb05 fs7">
+                <span class="c_232323">【五一黄金周】泰国·青迈拜县慢时光</span>
+                <span class="c_f68020">已退款</span>
+              </div>
+              <div class="ovd ubb padb10">
+                <div class="fl w35 padr10"><img src="./images/201805311624.jpg" /></div>
+                <div class="line11">
+                  <p class="fs625">订单编号：BY-1702365890</p>
+                  <p class="fs625">报名时间：2018/4/15  4:39:14 PM</p>
+                  <p class="fs625">出行时间：2017年8月3日（周五）  共4天</p>
+                </div>
+              </div>
+              <div class="flex_between padt05 padb075">
+                  <span class="c_232323 fs7">订单金额：￥50.00</span>
+                  <div class="mart-015">
+                      <a class="btn_ice btn_ice_yellow" onclick="operation(this);">再次报名</a>
+                      <a href="#" class="btn_ice btn_ice_default">取消订单</a>
+                      <a href="#" class="btn_ice btn_ice_default">订单详情</a>
+                  </div>
+              </div>
+            </div>
+
+            <div class="ice_order_list_item bg_fff padl075 padr075 mart10">
+              <div class="flex_between padt075 padb05 fs7">
+                <span class="c_232323">【五一黄金周】泰国·青迈拜县慢时光</span>
+                <span class="c_f68020">待出行</span>
+              </div>
+              <div class="ovd ubb padb10">
+                <div class="fl w35 padr10"><img src="./images/201805311625.jpg" /></div>
+                <div class="line11">
+                  <p class="fs625">订单编号：BY-1702365890</p>
+                  <p class="fs625">报名时间：2018/4/15  4:39:14 PM</p>
+                  <p class="fs625">出行时间：2017年8月3日（周五）  共4天</p>
+                </div>
+              </div>
+              <div class="flex_between padt05 padb075">
+                  <span class="c_232323 fs7">订单金额：￥50.00</span>
+                  <div class="mart-015">
+                      <a class="btn_ice btn_ice_yellow" onclick="operation(this);">再次报名</a>
+                      <a href="#" class="btn_ice btn_ice_default">取消订单</a>
+                      <a href="#" class="btn_ice btn_ice_default">订单详情</a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <footer class="aui-bar aui-bar-tab" id="footer">
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-home"></i>
+          <div class="aui-bar-tab-label"><a href="index.html">首页</a></div>
+      </div>
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-menu"></i>
+          <div class="aui-bar-tab-label"><a href="classify.html">分类</a></div>
+      </div>
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-find"></i>
+          <div class="aui-bar-tab-label">游记</div>
+      </div>
+      <div class="aui-bar-tab-item aui-active" tapmode>
+          <i class="aui-icon-my"></i>
+          <div class="aui-bar-tab-label"><a href="user.html">我的</a></div>
+      </div>
+  </footer>
+  
+  <ul class="listItem" id="listItem" style="display: none">
+  	<li>AAAAAA</li>
+  	<li>BBBBBB</li>
+  	<li>CCCCCC</li>
+  	<li>DDDDDD</li>
+  </ul>
+  
+  <script type="text/javascript" src="./script/api.js"></script>
+  <script type="text/javascript" src="./script/aui-tab.js"></script>
+  <script type="text/javascript" src="./script/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript">
+      apiready = function() {
+          api.parseTapmode();
+      }
+      
+      function operation(obj) {
+      	var offsetTop = $(obj).offset().top;
+      	var offsetLeft = $(obj).offset().left;
+      	var objH = $(obj).height();
+      	var objw = $(obj).width()/2;
+      	var itemw = $('#listItem').width()/2;
+      	var left = itemw-objw;
+      	$('#listItem').show().css({'top':offsetTop+objH+5,'left':offsetLeft-left-6.5})
+      	setTimeout('hide()', 2000)
+      }
+      
+      function hide() {
+      	$('#listItem').hide()
+      }
+  </script>
+</body>
+</html>

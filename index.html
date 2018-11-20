@@ -1,0 +1,955 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>冰岩探险旅行户外俱乐部</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui-base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+</head>
+<body>
+  <header class="aui-bar aui-bar-nav header ovd" id="aui-header">
+    <div class="head-user fl">
+      <div class="user_head_img"><img src="./images/head.jpg" /></div>
+      <div class="user_welcome" id="greetings">下午好</div>
+    </div>
+    <div class="aui-searchbar fl" id="search">
+      <div class="aui-searchbar-input" tapmode>
+          <i class="aui-iconfont aui-icon-search"></i>
+          <form action="javascript:search();">
+              <input type="search" placeholder="活动线路/目的地/领队" id="search-input">
+          </form>
+      </div>
+    </div>
+    <div class="head_right fr">
+      <div class="aui-message marr05 fr"><a class="icon_message" href="browse_records.html">记录<i>2</i></a></div>
+      <div class="aui-service fr"><a class="icon_service">客服</a></div>
+    </div>
+  </header>
+
+  <div class="aui-content">
+    <section class="aui-grid">
+      <div class="swiper-container swiperImg">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./images/201805161544.jpg" /></div>
+          <div class="swiper-slide"><img src="./images/201805161545.jpg" /></div>
+          <div class="swiper-slide"><img src="./images/201805161546.jpg" /></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-paginationImg"></div>
+      </div>
+    </section>
+
+    <section class="aui-grid">
+      <div class="aui-row">
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="./images/icon/icon_stub.png" /></div>
+            <div class="aui-grid-label"><a href="classify_stub.html" class="c_232323">周边短线</a></div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="./images/icon/icon_boutique.png" /></div>
+            <div class="aui-grid-label"><a href="classify_long.html" class="c_232323">长线精品</a></div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="./images/icon/icon_special.png" /></div>
+            <div class="aui-grid-label">区域专题</div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img pstr"><img src="./images/icon/icon_hols.png" /><span class="ice_dot">五一假期</span></div>
+            <div class="aui-grid-label">假日专区</div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="./images/icon/icon_news.png" /></div>
+            <div class="aui-grid-label"><a href="leader_dynamics.html" class="c_232323">领队动态</a></div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="./images/icon/icon_team.png" /></div>
+            <div class="aui-grid-label"><a href="team_tailor.html" class="c_232323">团队定制</a></div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="./images/icon/icon_parenting.png" /></div>
+            <div class="aui-grid-label"><a href="parenting.html" class="c_232323">亲子童步</a></div>
+          </div>
+          <div class="aui-col-xs-3">
+            <div class="aui-grid-img"><img src="./images/icon/icon_story.png" /></div>
+            <div class="aui-grid-label">冰岩故事</div>
+          </div>
+      </div>
+    </section>
+
+    <section class="aui-grid flex_between aui-margin-b-10">
+      <div class="aui-tit">
+        <img src="./images/iceandrock_b.png" />
+        <div class="swiper_box" style="overflow:hidden; height:20px;">
+          <div class="swiper-container sweiper_news">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="tit-des aui-ellipsis-1">葡萄籽 报名了 攀登哈巴雪山</div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="tit-des aui-ellipsis-1">五福 报名了 攀登哈巴雪山</div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="tit-des aui-ellipsis-1">小强 报名了 攀登哈巴雪山</div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="ice_dark flex_between" id="iceCoin">
+        <img src="./images/icon/icon_ice_coin.png" class="w10e h10e" />
+        <img src="./images/ice_coin_txt.png" class="ice_coin_txt" />
+      </div>
+    </section>
+
+    <section class="aui-grid">
+      <ul class="ice_tab">
+        <li class="aui-col-xs-4 active"><em>本周活动</em></li>
+        <li class="aui-col-xs-4"><em>下周活动</em></li>
+        <li class="aui-col-xs-4 aui-relative"><em>近期推荐</em><span class="ice_hot">HOT!</span></li>
+      </ul>
+
+      <div class="ice_tab_content">
+        <div class="ice_list">
+          <div class="swiper-container swiperActivity" style="padding-bottom: 32px">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161744.jpg"></dt>
+                    <dd class="aui-ellipsis-1">欧洲十日行</dd>
+                    <dd><span class="ice_tag ice_tag_blue fr">报名中</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161745.jpg"></dt>
+                    <dd class="aui-ellipsis-1">穿越青华山</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">已成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161746.jpg"></dt>
+                    <dd class="aui-ellipsis-1">彩虹悦野-520酷炫开</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161747.jpg"></dt>
+                    <dd class="aui-ellipsis-1">不走回头路</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161748.jpg"></dt>
+                    <dd class="aui-ellipsis-1">梦境青海湖</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161749.jpg"></dt>
+                    <dd class="aui-ellipsis-1">七彩甘南</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161744.jpg"></dt>
+                    <dd class="aui-ellipsis-1">黑排角海岸线</dd>
+                    <dd><span class="ice_tag ice_tag_blue fr">报名中</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161745.jpg"></dt>
+                    <dd class="aui-ellipsis-1">黑排角海岸线</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">已成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161746.jpg"></dt>
+                    <dd class="aui-ellipsis-1">黑排角海岸线</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161747.jpg"></dt>
+                    <dd class="aui-ellipsis-1">黑排角海岸线</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161748.jpg"></dt>
+                    <dd class="aui-ellipsis-1">黑排角海岸线</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161749.jpg"></dt>
+                    <dd class="aui-ellipsis-1">黑排角海岸线</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161744.jpg"></dt>
+                    <dd class="aui-ellipsis-1">欧洲十日行</dd>
+                    <dd><span class="ice_tag ice_tag_blue fr">报名中</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161745.jpg"></dt>
+                    <dd class="aui-ellipsis-1">穿越青华山</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">已成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161746.jpg"></dt>
+                    <dd class="aui-ellipsis-1">彩虹悦野-520酷炫开</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161747.jpg"></dt>
+                    <dd class="aui-ellipsis-1">不走回头路</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161748.jpg"></dt>
+                    <dd class="aui-ellipsis-1">梦境青海湖</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+                <div class="aui-col-xs-4">
+                  <dl class="ice_list_dl">
+                    <dt><img src="./images/201805161749.jpg"></dt>
+                    <dd class="aui-ellipsis-1">七彩甘南</dd>
+                    <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination2"></div>
+          </div>
+        </div>
+        <div class="ice_list" id="next_week" style="display:none">
+            <div class="" style="padding:20px; text-align:center">
+              下周活动-图文信息
+            </div>
+        </div>
+        <div class="ice_list" id="nearby" style="display:none">
+          <div class="" style="padding:20px; text-align:center">
+            近期推荐-图文信息
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10">
+      <div class="pad10"><img src="./images/201805171016.jpg" /></div>
+      <div class="flex_between">
+        <div class="padl10">
+          <img src="./images/201805171017.jpg" />
+        </div>
+        <div class="padl10 padr10 padb10">
+          <img src="./images/201805171018.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10">
+      <div class="ice_title padt10">
+        <h3><b>最当季 最适合</b></h3>
+        <h5>－精选当季热门推荐－</h5>
+      </div>
+      <div class="padl10 padr10 marl-10">
+        <div class="aui-col-xs-3">
+          <div class="ice_item">
+            <img src="./images/201805171054.jpg" />
+            <span class="ice_txt">汉中油菜花</span>
+          </div>
+        </div>
+        <div class="aui-col-xs-3">
+          <div class="ice_item">
+            <img src="./images/201805171055.jpg" />
+            <span class="ice_txt">白鹿原</span>
+          </div>
+        </div>
+        <div class="aui-col-xs-3">
+          <div class="ice_item">
+            <img src="./images/201805171056.jpg" />
+            <span class="ice_txt">铁炉庙樱花</span>
+          </div>
+        </div>
+        <div class="aui-col-xs-3">
+          <div class="ice_item">
+            <img src="./images/201805171057.jpg" />
+            <span class="ice_txt">金丝大峡谷</span>
+          </div>
+        </div>
+        <div class="aui-col-xs-3">
+          <div class="ice_item">
+            <img src="./images/201805171058.jpg" />
+            <span class="ice_txt">丹霞奇观</span>
+          </div>
+        </div>
+        <div class="aui-col-xs-3">
+          <div class="ice_item">
+            <img src="./images/201805171059.jpg" />
+            <span class="ice_txt">观音山</span>
+          </div>
+        </div>
+        <div class="aui-col-xs-3">
+          <div class="ice_item">
+            <img src="./images/201805171060.jpg" />
+            <span class="ice_txt">户县太平峪</span>
+          </div>
+        </div>
+        <div class="aui-col-xs-3">
+          <div class="ice_item">
+            <img src="./images/201805171061.jpg" />
+            <span class="ice_txt">樊川桃溪堡</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10">
+      <div class="ice_title padt10">
+        <h3><b>长线精品</b></h3>
+        <h5>－多次探线 精心设计 极致体验推荐－</h5>
+      </div>
+      <div class="marl10 marr10 ubb padb05">
+        <div class="pstr mart10">
+          <span class="top_rank">01</span>
+          <img src="./images/201805171535.jpg" />
+          <span class="long_price">130元/人起</span>
+        </div>
+        <div class="swiper-container swiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>04月05</b><span class="c_999 fs625"> - 04月06</span></div>
+                <div class="fs575 c_f68020"><img src="./images/icon/icon_sign_up.png" class="inblock pstr t01e w055e marr03" />报名中</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>05月05</b><span class="c_999 fs625"> - 05月06</span></div>
+                <div class="fs575 c_f68020">即将成行</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>06月05</b><span class="c_999 fs625"> - 06月06</span></div>
+                <div class="fs575 c_d865ff">已满员</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>07月05</b><span class="c_999 fs625"> - 07月06</span></div>
+                <div class="fs575 c_f68020">报名中</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>08月05</b><span class="c_999 fs625"> - 08月06</span></div>
+                <div class="fs575 c_f68020">报名中</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>09月05</b><span class="c_999 fs625"> - 09月06</span></div>
+                <div class="fs575 c_f68020">报名中</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 pad0 mart03">
+                <div class="fs8"><b>10月05</b><span class="c_999 fs625"> - 10月06</span></div>
+                <div class="fs575 c_f68020">报名中</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marl10 marr10 ubb padb05">
+        <div class="pstr mart10">
+          <span class="top_rank">02</span>
+          <img src="./images/201805171731.jpg" />
+          <span class="long_price">130元/人起</span>
+        </div>
+        <div class="swiper-container swiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>04月05</b><span class="c_999 fs625"> - 04月06</span></div>
+                <div class="fs575 c_f68020"><img src="./images/icon/icon_sign_up.png" class="inblock pstr t01e w055e marr03" />报名中</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>05月05</b><span class="c_999 fs625"> - 05月06</span></div>
+                <div class="fs575 c_f68020">即将成行</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>06月05</b><span class="c_999 fs625"> - 06月06</span></div>
+                <div class="fs575 c_f68020">已成行</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>07月05</b><span class="c_999 fs625"> - 07月06</span></div>
+                <div class="fs575 c_d865ff">已满员</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 pad0 mart03">
+                <div class="fs8"><b>08月05</b><span class="c_999 fs625"> - 08月06</span></div>
+                <div class="fs575 c_f68020">报名中</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marl10 marr10 ubb padb05">
+        <div class="pstr mart10">
+          <span class="top_rank">03</span>
+          <img src="./images/201805171738.jpg" />
+          <span class="long_price">130元/人起</span>
+        </div>
+        <div class="swiper-container swiper3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>04月05</b><span class="c_999 fs625"> - 04月06</span></div>
+                <div class="fs575 c_f68020"><img src="./images/icon/icon_sign_up.png" class="inblock pstr t01e w055e marr03" />报名中</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>05月05</b><span class="c_999 fs625"> - 05月06</span></div>
+                <div class="fs575 c_f68020">即将成行</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>06月05</b><span class="c_999 fs625"> - 06月06</span></div>
+                <div class="fs575 c_f68020">已成行</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 pad0 mart03">
+                <div class="fs8"><b>07月05</b><span class="c_999 fs625"> - 07月06</span></div>
+                <div class="fs575 c_d865ff">已满员</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marl10 marr10 ubb padb05">
+        <div class="pstr mart10">
+          <span class="top_rank">04</span>
+          <img src="./images/201805171739.jpg" />
+          <span class="long_price">130元/人起</span>
+        </div>
+        <div class="swiper-container swiper4">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>04月05</b><span class="c_999 fs625"> - 04月06</span></div>
+                <div class="fs575 c_f68020"><img src="./images/icon/icon_sign_up.png" class="inblock pstr t01e w055e marr03" />报名中</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>05月05</b><span class="c_999 fs625"> - 05月06</span></div>
+                <div class="fs575 c_d865ff">已满员</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>06月05</b><span class="c_999 fs625"> - 06月06</span></div>
+                <div class="fs575 c_f68020">即将成行</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 pad0 mart03">
+                <div class="fs8"><b>07月05</b><span class="c_999 fs625"> - 07月06</span></div>
+                <div class="fs575 c_f68020">已成行</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marl10 marr10 ubb padb05">
+        <div class="pstr mart10">
+          <span class="top_rank">05</span>
+          <img src="./images/201805171740.jpg" />
+          <span class="long_price">130元/人起</span>
+        </div>
+        <div class="swiper-container swiper5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>04月05</b><span class="c_999 fs625"> - 04月06</span></div>
+                <div class="fs575 c_f68020"><img src="./images/icon/icon_sign_up.png" class="inblock pstr t01e w055e marr03" />报名中</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>05月05</b><span class="c_999 fs625"> - 05月06</span></div>
+                <div class="fs575 c_d865ff">已满员</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>06月05</b><span class="c_999 fs625"> - 06月06</span></div>
+                <div class="fs575 c_f68020">即将成行</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 pad0 mart03">
+                <div class="fs8"><b>07月05</b><span class="c_999 fs625"> - 07月06</span></div>
+                <div class="fs575 c_f68020">已成行</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="padl10 padr10 padb10">
+        <div class="pstr mart10">
+          <span class="top_rank">06</span>
+          <img src="./images/201805171741.jpg" />
+          <span class="long_price">130元/人起</span>
+        </div>
+        <div class="swiper-container swiper6">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>04月05</b><span class="c_999 fs625"> - 04月06</span></div>
+                <div class="fs575 c_f68020"><img src="./images/icon/icon_sign_up.png" class="inblock pstr t01e w055e marr03" />报名中</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>05月05</b><span class="c_999 fs625"> - 05月06</span></div>
+                <div class="fs575 c_d865ff">已满员</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 ubr pad0 mart03">
+                <div class="fs8"><b>06月05</b><span class="c_999 fs625"> - 06月06</span></div>
+                <div class="fs575 c_f68020">即将成行</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-4 w10 pad0 mart03">
+                <div class="fs8"><b>07月05</b><span class="c_999 fs625"> - 07月06</span></div>
+                <div class="fs575 c_f68020">已成行</div>
+                <div><a class="ice_btn ice_btn_primary">查看</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10">
+      <div class="ice_title padt10">
+        <h3><b>亲子童步</b></h3>
+        <h5>－陪伴他们一起快乐，一起成长－</h5>
+      </div>
+      <div class="ice_list padt10 padr10">
+        <div class="swiper-container offspring" style="padding-bottom: 32px">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161744.jpg"></dt>
+                  <dd class="aui-ellipsis-1">欧洲十日行</dd>
+                  <dd><span class="ice_tag ice_tag_blue fr">报名中</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161745.jpg"></dt>
+                  <dd class="aui-ellipsis-1">穿越青华山</dd>
+                  <dd><span class="ice_tag ice_tag_yellow fr">已成行</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161746.jpg"></dt>
+                  <dd class="aui-ellipsis-1">彩虹悦野-520酷炫开</dd>
+                  <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161747.jpg"></dt>
+                  <dd class="aui-ellipsis-1">不走回头路</dd>
+                  <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161744.jpg"></dt>
+                  <dd class="aui-ellipsis-1">黑排角海岸线</dd>
+                  <dd><span class="ice_tag ice_tag_blue fr">报名中</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161745.jpg"></dt>
+                  <dd class="aui-ellipsis-1">黑排角海岸线</dd>
+                  <dd><span class="ice_tag ice_tag_yellow fr">已成行</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161746.jpg"></dt>
+                  <dd class="aui-ellipsis-1">黑排角海岸线</dd>
+                  <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161747.jpg"></dt>
+                  <dd class="aui-ellipsis-1">黑排角海岸线</dd>
+                  <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161744.jpg"></dt>
+                  <dd class="aui-ellipsis-1">欧洲十日行</dd>
+                  <dd><span class="ice_tag ice_tag_blue fr">报名中</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161745.jpg"></dt>
+                  <dd class="aui-ellipsis-1">穿越青华山</dd>
+                  <dd><span class="ice_tag ice_tag_yellow fr">已成行</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161746.jpg"></dt>
+                  <dd class="aui-ellipsis-1">彩虹悦野-520酷炫开</dd>
+                  <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+              <div class="aui-col-xs-6">
+                <dl class="ice_list_dl">
+                  <dt><img src="./images/201805161747.jpg"></dt>
+                  <dd class="aui-ellipsis-1">不走回头路</dd>
+                  <dd><span class="ice_tag ice_tag_yellow fr">即将成行</span><span class="c_777">周日</span></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination3"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="aui-grid aui-margin-t-10">
+      <div class="ice_title padt10 marb05">
+        <h3><b>我要看领队</b></h3>
+        <h5>－Ta们旅行经验丰富，充满热情，乐于分享！－</h5>
+      </div>
+      <div class="ice_leader padl10 padr10">
+        <div class="ovd padt10 padb10 ubb">
+          <div class="fl"><img src="./images/head_img01.png" class="w25e"></div>
+          <div class="padt5 padl10 fl">
+            <div class="fs7">领队：小冰</div>
+            <div class="mart015 fs625 c_999">绿领<span class="space_line"></span>带队<span class="c_f68020">16</span>次<span class="space_line"></span>评分 <span class="c_f68020">4.95</span></div>
+          </div>
+          <div class="fr"><a class="ice_btn ice_view">去看看</a></div>
+        </div>
+        <div class="ovd padt10 padb10 ubb">
+          <div class="fl"><img src="./images/head_img02.png" class="w25e"></div>
+          <div class="padt5 padl10 fl">
+            <div class="fs7">领队：小冰</div>
+            <div class="mart015 fs625 c_999">绿领<span class="space_line"></span>带队<span class="c_f68020">16</span>次<span class="space_line"></span>评分 <span class="c_f68020">4.95</span></div>
+          </div>
+          <div class="fr"><a class="ice_btn ice_view">去看看</a></div>
+        </div>
+        <div class="ovd padt10 padb10 ubb">
+          <div class="fl"><img src="./images/head_img01.png" class="w25e"></div>
+          <div class="padt5 padl10 fl">
+            <div class="fs7">领队：小冰</div>
+            <div class="mart015 fs625 c_999">绿领<span class="space_line"></span>带队<span class="c_f68020">16</span>次<span class="space_line"></span>评分 <span class="c_f68020">4.95</span></div>
+          </div>
+          <div class="fr"><a class="ice_btn ice_view">去看看</a></div>
+        </div>
+        <div class="ovd padt10 padb10 ubb">
+          <div class="fl"><img src="./images/head_img02.png" class="w25e"></div>
+          <div class="padt5 padl10 fl">
+            <div class="fs7">领队：小冰</div>
+            <div class="mart015 fs625 c_999">绿领<span class="space_line"></span>带队<span class="c_f68020">16</span>次<span class="space_line"></span>评分 <span class="c_f68020">4.95</span></div>
+          </div>
+          <div class="fr"><a class="ice_btn ice_view">去看看</a></div>
+        </div>
+        <div class="ovd padt10 padb10 ubb">
+          <div class="fl"><img src="./images/head_img02.png" class="w25e"></div>
+          <div class="padt5 padl10 fl">
+            <div class="fs7">领队：小冰</div>
+            <div class="mart015 fs625 c_999">绿领<span class="space_line"></span>带队<span class="c_f68020">16</span>次<span class="space_line"></span>评分 <span class="c_f68020">4.95</span></div>
+          </div>
+          <div class="fr"><a class="ice_btn ice_view">去看看</a></div>
+        </div>
+        <div class="ovd padt10 padb10 ubb">
+          <div class="fl"><img src="./images/head_img01.png" class="w25e"></div>
+          <div class="padt5 padl10 fl">
+            <div class="fs7">领队：小冰</div>
+            <div class="mart015 fs625 c_999">绿领<span class="space_line"></span>带队<span class="c_f68020">16</span>次<span class="space_line"></span>评分 <span class="c_f68020">4.95</span></div>
+          </div>
+          <div class="fr"><a class="ice_btn ice_view">去看看</a></div>
+        </div>
+        <div class="ovd padt10 padb10 ubb">
+          <div class="fl"><img src="./images/head_img02.png" class="w25e"></div>
+          <div class="padt5 padl10 fl">
+            <div class="fs7">领队：小冰</div>
+            <div class="mart015 fs625 c_999">绿领<span class="space_line"></span>带队<span class="c_f68020">16</span>次<span class="space_line"></span>评分 <span class="c_f68020">4.95</span></div>
+          </div>
+          <div class="fr"><a class="ice_btn ice_view">去看看</a></div>
+        </div>
+        <div class="ovd padt10 padb10">
+          <div class="fl"><img src="./images/head_img01.png" class="w25e"></div>
+          <div class="padt5 padl10 fl">
+            <div class="fs7">领队：小冰</div>
+            <div class="mart015 fs625 c_999">绿领<span class="space_line"></span>带队<span class="c_f68020">16</span>次<span class="space_line"></span>评分 <span class="c_f68020">4.95</span></div>
+          </div>
+          <div class="fr"><a class="ice_btn ice_view">去看看</a></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="aui-grid mart10 padt10 padb10 marb05 txc fs625"><a href="#">查看全部</a></div>
+  </div>
+
+  <footer class="aui-bar aui-bar-tab" id="footer">
+      <div class="aui-bar-tab-item aui-active" tapmode>
+          <i class="aui-icon-home"></i>
+          <div class="aui-bar-tab-label"><a href="index.html">首页</a></div>
+      </div>
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-menu"></i>
+          <div class="aui-bar-tab-label"><a href="classify.html">分类</a></div>
+      </div>
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-find"></i>
+          <div class="aui-bar-tab-label">游记</div>
+      </div>
+      <div class="aui-bar-tab-item" tapmode>
+          <i class="aui-icon-my"></i>
+          <div class="aui-bar-tab-label"><a href="user.html">我的</a></div>
+      </div>
+  </footer>
+
+  <div class="ice_dialog" id="iceCoin_dialog" style="margin-top:-120px;">
+    <div class="ice_dialog_header"><b>冰币说明</b></div>
+    <div class="line15 marl10e marr10e padb075 fs65 txl">
+      <div>1. 冰币不可转让，不可折现</div>
+      <div class="line11">2. 请勿用不当手段刷冰币，一经发现，立即封号</div>
+      <div class="line11">3. 冰岩户外可能会根据业务情况对冰币奖励及使用做调整</div>
+      <div class="line11">4. 转发活动、活动报名、新用户注册等都可获得一定量冰币</div>
+      <div class="line11">5. 活动最终解释权归冰岩户外所有</div>
+    </div>
+    <div class="Igotit">我知道了</div>
+  </div>
+  
+  <div class="ice_dialog ice_dialog_in" id="ice_follow" style="margin-top:-190px;">
+    <div class="follow_top">
+		<img src="./images/wechat.jpg" />
+    </div>
+    <div class="padt075 fs725">关注微信公众号“冰岩探险旅行”</div>
+	<div class="padt01 padb075 c_999 fs625">实时掌握订单状态、最新活动，还可领取冰币哦！</div>
+	<div class="scan"><img src="./images/smgz.png" /></div>
+	<div class="pstr"><span class="whiteLine"></span><span class="close_follow"></span></div>
+  </div>
+  <div class="ice_shade ice_mask_in"></div>
+  <script type="text/javascript" src="./script/api.js"></script>
+  <script type="text/javascript" src="./script/aui-slide.js"></script>
+  <script type="text/javascript" src="./script/aui-tab.js"></script>
+  <script type="text/javascript" src="./script/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="./script/swiper.min.js"></script>
+  <script type="text/javascript">
+    var swiperImg = new Swiper('.swiperImg', {
+      slidesPerView: 1,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-paginationImg',
+        clickable: true
+      }
+    });
+    var swiper = new Swiper('.sweiper_news', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        mousewheel: true,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false
+        },
+    });
+    var swiperActivity = new Swiper('.swiperActivity', {
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-pagination2',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
+      }
+    });
+
+    var offspring = new Swiper('.offspring', {
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-pagination3',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
+      }
+    });
+
+    var swiper1 = new Swiper('.swiper1', {
+      slidesPerView: 3,
+      spaceBetween: 0
+    });
+
+    var swiper2 = new Swiper('.swiper2', {
+      slidesPerView: 3,
+      spaceBetween: 0
+    });
+
+    var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 3,
+      spaceBetween: 0
+    });
+
+    var swiper4 = new Swiper('.swiper4', {
+      slidesPerView: 3,
+      spaceBetween: 0
+    });
+
+    var swiper5 = new Swiper('.swiper5', {
+      slidesPerView: 3,
+      spaceBetween: 0
+    });
+
+    var swiper6 = new Swiper('.swiper6', {
+      slidesPerView: 3,
+      spaceBetween: 0
+    });
+
+    apiready = function(){
+        api.parseTapmode();
+    }
+
+    $(".ice_tab li").click(function() {
+      var index=$(this).index();
+      $(this).addClass("active").siblings().removeClass("active");
+      $(".ice_tab_content").find(".ice_list").hide().eq(index).show();
+    })
+
+    $('#iceCoin').click(function() {
+      $('.ice_shade').addClass('ice_mask_in');
+      $('#iceCoin_dialog').addClass('ice_dialog_in');
+    })
+
+    $('.ice_shade').click(function() {
+      $(this).removeClass('ice_mask_in');
+      if($('.ice_dialog').hasClass('ice_dialog_in')) {
+        $('.ice_dialog').removeClass('ice_dialog_in');
+      }
+    })
+    $('.Igotit').click(function() {
+      $('.ice_shade').removeClass('ice_mask_in');
+      $('#iceCoin_dialog').removeClass('ice_dialog_in');
+    })
+    
+    $('.close_follow').click(function() {
+      $('.ice_shade').removeClass('ice_mask_in');
+      $('.ice_dialog').removeClass('ice_dialog_in');
+    })
+    
+    now = new Date(),hour = now.getHours();
+    if(hour < 6) {$('#greetings').text("凌晨好")}
+    else if (hour < 9){$('#greetings').text("早上好")}
+    else if (hour < 12){$('#greetings').text("上午好")}
+    else if (hour < 14){$('#greetings').text("中午好")}
+    else if (hour < 17){$('#greetings').text("下午好")}
+    else if (hour < 19){$('#greetings').text("傍晚好")}
+    else if (hour < 22){$('#greetings').text("晚上好")}
+    else {$('#greetings').text("夜里好")}
+  </script>
+</body>
+</html>

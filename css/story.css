@@ -1,0 +1,9 @@
+.blue {background-color:#067ed0;}
+.blue_dark {background-color:#056bba;}
+.logo_story {position:fixed; bottom:1.0rem; width:100%; text-align: center;}
+.logo_story img {width:50%; display:inline-block;}
+.pnstr {position:relative;}
+.story_nav {position:absolute; left:0; bottom: 0; width:100%; height:1.5rem; line-height: 1.5rem; color:#fff; font-size:0.875rem; text-indent:0.5rem; background:url(../images/tmd20.png);}
+.home_back {display:block; width:1.725rem; height:1.725rem; background: url(../images/icon/home_back.png) no-repeat; background-size: 1.725rem; text-indent: -6rem; overflow: hidden; margin: 1.5rem 0.75rem;}
+.marr3 {margin-right:0.3rem;}
+.marl3 {margin-left:0.3rem;}
